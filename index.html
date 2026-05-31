@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✨ 프사 만들기 마법사</title>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pink: #FF6B9D;
+    --purple: #A855F7;
+    --mint: #34D399;
+    --blue: #60A5FA;
+    --bg: #FFF8F0;
+    --card: #FFFFFF;
+    --text: #2D1B69;
+    --muted: #8B7BAB;
+    --radius: 20px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Nanum Gothic', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(255,107,157,0.08) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(168,85,247,0.08) 0%, transparent 40%);
+  }
+  header {
+    text-align: center;
+    padding: 48px 24px 28px;
+    position: relative;
+  }
+  .floating-stars { position: absolute; top: 0; left: 0; right: 0; pointer-events: none; overflow: hidden; height: 100%; }
+  .star { position: absolute; font-size: 20px; animation: float 3s ease-in-out infinite; opacity: 0.5; }
+  .star:nth-child(1) { top: 15%; left: 8%; animation-delay: 0s; }
+  .star:nth-child(2) { top: 25%; right: 10%; animation-delay: 0.5s; font-size: 14px; }
+  .star:nth-child(3) { top: 60%; left: 5%; animation-delay: 1s; font-size: 16px; }
+  .star:nth-child(4) { top: 40%; right: 5%; animation-delay: 1.5s; }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(10deg); }
+  }
+  .magic-title {
+    font-family: 'Jua', cursive;
+    font-size: clamp(26px, 5vw, 44px);
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .magic-title span {
+    background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  header p { font-size: 15px; color: var(--muted); max-width: 440px; margin: 0 auto; line-height: 1.6; }
+
+
+
+  main { max-width: 860px; margin: 0 auto; padding: 32px 20px 80px; }
+
+  .step-label { text-align: center; font-family: 'Jua', cursive; font-size: 13px; color: var(--muted); margin-bottom: 10px; letter-spacing: 1px; }
+  .progress-bar-wrap { background: #EDE9FF; border-radius: 100px; height: 10px; margin-bottom: 36px; overflow: hidden; }
+  .progress-bar-fill { height: 100%; border-radius: 100px; background: linear-gradient(90deg, var(--pink), var(--purple)); transition: width 0.5s cubic-bezier(.4,0,.2,1); }
+
+  .tip-box {
+    background: linear-gradient(135deg, #FFF0F8, #F5F0FF);
+    border: 1.5px solid #DDD6FE;
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin-bottom: 32px;
+    font-size: 13px;
+    color: #6D3F9E;
+    line-height: 1.6;
+  }
+  .tip-box strong { color: var(--purple); font-family: 'Jua', cursive; }
+
+  .section { margin-bottom: 36px; }
+  .section-title {
+    font-family: 'Jua', cursive;
+    font-size: 21px;
+    color: var(--text);
+    margin-bottom: 4px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-title .badge {
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    color: white;
+    font-size: 11px;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-weight: 700;
+  }
+  .section-sub { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(138px, 1fr));
+    gap: 11px;
+  }
+  .option-card {
+    background: var(--card);
+    border: 2.5px solid #EDE9FF;
+    border-radius: var(--radius);
+    padding: 15px 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s cubic-bezier(.4,0,.2,1);
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+  }
+  .option-card:hover {
+    border-color: var(--purple);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(168,85,247,0.18);
+  }
+  .option-card.selected {
+    border-color: var(--purple);
+    background: linear-gradient(135deg, #FAF5FF, #FDF2F8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(168,85,247,0.22);
+  }
+  .option-card.selected::after {
+    content: '✓';
+    position: absolute;
+    top: 8px; right: 10px;
+    width: 20px; height: 20px;
+    background: var(--purple);
+    color: white;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+  }
+  .option-emoji { font-size: 30px; margin-bottom: 7px; display: block; line-height: 1; }
+  .option-name { font-family: 'Jua', cursive; font-size: 14px; color: var(--text); margin-bottom: 3px; }
+  .option-desc { font-size: 11px; color: var(--muted); line-height: 1.4; }
+
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, #EDE9FF, transparent); margin: 8px 0 30px; }
+
+  /* 배경 섹션 - 흐릿하게 강조 */
+  .bg-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #FFF0E8;
+    border: 1px solid #FED7AA;
+    border-radius: 100px;
+    padding: 4px 12px;
+    font-size: 12px;
+    color: #C2410C;
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+
+  .result-box {
+    background: linear-gradient(135deg, #2D1B69, #1E0A4C);
+    border-radius: 24px;
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(45,27,105,0.3);
+  }
+  .result-box::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(168,85,247,0.3), transparent 70%);
+    border-radius: 50%;
+  }
+  .result-label {
+    font-family: 'Jua', cursive;
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 14px;
+    letter-spacing: 2px;
+    position: relative; z-index: 1;
+  }
+  #prompt-output {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #E9D5FF;
+    font-family: 'Nanum Gothic', sans-serif;
+    min-height: 80px;
+    position: relative; z-index: 1;
+    word-break: break-word;
+  }
+  .empty-hint { color: rgba(255,255,255,0.25); font-style: italic; font-size: 14px; }
+  .copy-btn { margin-top: 20px; display: flex; gap: 12px; position: relative; z-index: 1; flex-wrap: wrap; }
+  .btn { border: none; border-radius: 100px; cursor: pointer; font-family: 'Jua', cursive; font-size: 15px; padding: 12px 28px; transition: all 0.2s; display: flex; align-items: center; gap: 8px; }
+  .btn-copy { background: linear-gradient(135deg, var(--pink), var(--purple)); color: white; box-shadow: 0 4px 16px rgba(168,85,247,0.4); }
+  .btn-copy:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(168,85,247,0.5); }
+  .btn-copy:active { transform: scale(0.97); }
+  .btn-reset { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5); border: 1.5px solid rgba(255,255,255,0.15); }
+  .btn-reset:hover { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.7); }
+  .copy-toast { display: inline-flex; align-items: center; gap: 6px; background: rgba(52,211,153,0.15); color: var(--mint); border: 1px solid rgba(52,211,153,0.3); border-radius: 100px; padding: 8px 18px; font-size: 13px; font-weight: 700; opacity: 0; transition: opacity 0.3s; }
+  .copy-toast.show { opacity: 1; }
+
+  @media (max-width: 480px) {
+    .options-grid { grid-template-columns: repeat(2, 1fr); }
+    header { padding: 36px 20px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="floating-stars">
+    <span class="star">✨</span>
+    <span class="star">🌟</span>
+    <span class="star">💫</span>
+    <span class="star">⭐</span>
+  </div>
+  <div class="magic-title">🪄 <span>프사 만들기 마법사</span></div>
+  <p>내 얼굴이 주인공인 예쁜 프로필 사진을 만들어봐요!</p>
+  <div style="margin: 20px auto 0; max-width: 480px; text-align: center;">
+    <div style="font-family: 'Jua', cursive; font-size: 16px; color: #2D1B69; margin-bottom: 6px;">📸 사진을 먼저 찍어요!</div>
+    <div style="font-size: 14px; color: #8B7BAB; line-height: 1.8;">
+      태블릿 홈 화면에서 카메라 앱을 찾아 눌러주세요<br>
+      셀카 버튼을 눌러 내 얼굴이 화면에 나오게 해요
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="step-label" id="step-label">아직 아무것도 선택하지 않았어요</div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-fill" id="progress-fill" style="width: 0%"></div>
+  </div>
+
+  <div class="tip-box">
+    <strong>💡 팁!</strong> 어떤 걸 골라도 얼굴이 크고 선명하게 나오도록 만들어져 있어요.
+    배경은 살짝만 보이고 <strong>내 얼굴이 주인공</strong>이 되는 프사가 완성돼요 ✨
+  </div>
+
+  <!-- 1. 화풍 -->
+  <div class="section">
+    <div class="section-title">🎨 어떤 그림 스타일? <span class="badge">화풍</span></div>
+    <div class="section-sub">내 사진을 어떤 그림처럼 바꿀까요?</div>
+    <div class="options-grid" data-group="style">
+      <div class="option-card" data-value="애니메이션 일러스트 스타일, 선명한 색감, 깔끔한 선, 만화 느낌">
+        <span class="option-emoji">🌸</span>
+        <div class="option-name">애니메이션</div>
+        <div class="option-desc">일본 만화처럼 귀엽게</div>
+      </div>
+      <div class="option-card" data-value="수채화 그림 스타일, 부드럽게 번지는 물감, 섬세한 붓터치">
+        <span class="option-emoji">💧</span>
+        <div class="option-name">수채화</div>
+        <div class="option-desc">물감이 번지는 느낌</div>
+      </div>
+      <div class="option-card" data-value="유화 스타일, 풍부하고 진한 색감, 질감 있는 붓터치, 고급스러운 그림">
+        <span class="option-emoji">🖼️</span>
+        <div class="option-name">유화</div>
+        <div class="option-desc">고급스러운 그림 느낌</div>
+      </div>
+      <div class="option-card" data-value="디지털 아트 스타일, 광택감 있는 마감, 선명한 일러스트">
+        <span class="option-emoji">💻</span>
+        <div class="option-name">디지털아트</div>
+        <div class="option-desc">깔끔하고 선명한 일러스트</div>
+      </div>
+      <div class="option-card" data-value="지브리 스튜디오 스타일, 따뜻한 마법 같은 분위기, 그림 같은 묘사">
+        <span class="option-emoji">🏯</span>
+        <div class="option-name">지브리 스타일</div>
+        <div class="option-desc">토토로처럼 따뜻하게</div>
+      </div>
+      <div class="option-card" data-value="치비 캐릭터 스타일, 큰 눈, 사랑스러운 미니 캐릭터 비율">
+        <span class="option-emoji">🐣</span>
+        <div class="option-name">치비 스타일</div>
+        <div class="option-desc">초미니 캐릭터처럼</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 2. 분위기 -->
+  <div class="section">
+    <div class="section-title">🌈 어떤 분위기? <span class="badge">분위기</span></div>
+    <div class="section-sub">프사에서 느껴지는 감정을 골라봐요!</div>
+    <div class="options-grid" data-group="mood">
+      <div class="option-card" data-value="꿈결 같은 분위기, 부드럽게 빛나는 조명, 몽환적인 느낌">
+        <span class="option-emoji">☁️</span>
+        <div class="option-name">몽글몽글</div>
+        <div class="option-desc">꿈속 같은 부드러운 느낌</div>
+      </div>
+      <div class="option-card" data-value="마법 같은 판타지 분위기, 반짝이는 빛, 마법에 걸린 듯한 느낌">
+        <span class="option-emoji">✨</span>
+        <div class="option-name">마법 같은</div>
+        <div class="option-desc">동화 속 마법사 느낌</div>
+      </div>
+      <div class="option-card" data-value="따뜻하고 포근한 분위기, 황금빛 햇살, 마음이 따뜻해지는 느낌">
+        <span class="option-emoji">🌅</span>
+        <div class="option-name">따뜻하고 포근한</div>
+        <div class="option-desc">햇살 가득한 오후 느낌</div>
+      </div>
+      <div class="option-card" data-value="시원하고 청량한 분위기, 깨끗한 색감, 상쾌한 느낌">
+        <span class="option-emoji">❄️</span>
+        <div class="option-name">시원하고 청량한</div>
+        <div class="option-desc">바닷바람 맞는 느낌</div>
+      </div>
+      <div class="option-card" data-value="신나고 활기찬 분위기, 강렬한 색감, 생기 넘치는 느낌">
+        <span class="option-emoji">🎉</span>
+        <div class="option-name">신나고 활기찬</div>
+        <div class="option-desc">파티처럼 생생하고 밝게</div>
+      </div>
+      <div class="option-card" data-value="신비로운 밤 분위기, 달빛, 별빛 가득한 느낌">
+        <span class="option-emoji">🌙</span>
+        <div class="option-name">신비로운 밤</div>
+        <div class="option-desc">별빛 아래 신비로운 느낌</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 3. 색감 -->
+  <div class="section">
+    <div class="section-title">🎨 어떤 색깔? <span class="badge">색감</span></div>
+    <div class="section-sub">전체적인 색깔 분위기를 골라봐요!</div>
+    <div class="options-grid" data-group="color">
+      <div class="option-card" data-value="파스텔 색감, 부드러운 분홍·연보라·하늘색, 달콤한 색조">
+        <span class="option-emoji">🍬</span>
+        <div class="option-name">파스텔톤</div>
+        <div class="option-desc">사탕처럼 달콤한 색깔</div>
+      </div>
+      <div class="option-card" data-value="선명하고 화려한 색감, 풍부한 색조, 다채롭고 생동감 있는 색상">
+        <span class="option-emoji">🌈</span>
+        <div class="option-name">무지개 컬러</div>
+        <div class="option-desc">선명하고 화려한 색깔</div>
+      </div>
+      <div class="option-card" data-value="황금빛 따뜻한 색감, 호박색과 꿀빛, 빈티지한 따뜻함">
+        <span class="option-emoji">🌻</span>
+        <div class="option-name">노을빛 황금색</div>
+        <div class="option-desc">따뜻한 황금빛·주황빛</div>
+      </div>
+      <div class="option-card" data-value="시원한 파랑·민트 색감, 얼음처럼 맑고 차분한 색조">
+        <span class="option-emoji">💙</span>
+        <div class="option-name">시원한 파란색</div>
+        <div class="option-desc">하늘·바다 같은 파란색</div>
+      </div>
+      <div class="option-card" data-value="마법 같은 보라·분홍 색감, 무지개빛으로 반짝이는 색조">
+        <span class="option-emoji">💜</span>
+        <div class="option-name">마법 보라+핑크</div>
+        <div class="option-desc">반짝이는 보라·분홍 조합</div>
+      </div>
+      <div class="option-card" data-value="차분한 흑백 색감, 세련된 중성 색조, 부드러운 명암 대비">
+        <span class="option-emoji">🤍</span>
+        <div class="option-name">깔끔한 흑백</div>
+        <div class="option-desc">차분하고 세련된 흑백</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 4. 조명 -->
+  <div class="section">
+    <div class="section-title">💡 어떤 빛으로 비춰줄까요? <span class="badge">조명</span></div>
+    <div class="section-sub">얼굴에 비치는 빛의 느낌을 골라봐요!</div>
+    <div class="options-grid" data-group="lighting">
+      <div class="option-card" data-value="얼굴에 부드럽게 퍼지는 자연광, 그림자 없이 밝고 화사한 조명">
+        <span class="option-emoji">☀️</span>
+        <div class="option-name">자연스러운 햇빛</div>
+        <div class="option-desc">밝고 화사하게 빛나는 얼굴</div>
+      </div>
+      <div class="option-card" data-value="얼굴에 비치는 황금빛 노을 조명, 따뜻하고 로맨틱한 빛">
+        <span class="option-emoji">🌇</span>
+        <div class="option-name">노을빛 조명</div>
+        <div class="option-desc">따뜻하고 로맨틱한 빛</div>
+      </div>
+      <div class="option-card" data-value="얼굴에 은은하게 빛나는 달빛 조명, 신비롭고 부드러운 빛">
+        <span class="option-emoji">🌕</span>
+        <div class="option-name">달빛 조명</div>
+        <div class="option-desc">신비롭고 은은한 빛</div>
+      </div>
+      <div class="option-card" data-value="얼굴에 반짝이는 별빛과 요정 빛, 마법 같은 빛줄기">
+        <span class="option-emoji">⭐</span>
+        <div class="option-name">마법 반짝이 빛</div>
+        <div class="option-desc">마법처럼 반짝이는 빛</div>
+      </div>
+      <div class="option-card" data-value="얼굴에 부드럽게 퍼지는 스튜디오 조명, 피부가 맑고 깨끗하게 보이는 빛">
+        <span class="option-emoji">💎</span>
+        <div class="option-name">맑고 깨끗한 빛</div>
+        <div class="option-desc">피부가 빛나 보이는 조명</div>
+      </div>
+      <div class="option-card" data-value="얼굴에 은은한 형광빛과 네온 조명, 개성 있고 독특한 색빛">
+        <span class="option-emoji">🪩</span>
+        <div class="option-name">반짝 네온빛</div>
+        <div class="option-desc">개성 있는 형광 조명</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 5. 배경 (흐릿하게) -->
+  <div class="section">
+    <div class="section-title">🌫️ 뒤에 살짝 보일 배경은? <span class="badge">배경 힌트</span></div>
+    <div class="bg-note">⚠️ 배경은 흐릿하게! 얼굴이 주인공이에요</div>
+    <div class="section-sub">배경은 얼굴 뒤에 살짝만 보여요. 없어도 괜찮아요!</div>
+    <div class="options-grid" data-group="bg">
+      <div class="option-card" data-value="뒤에 살짝 보이는 흐릿한 벚꽃 배경, 보케 효과로 꽃잎이 몽글몽글">
+        <span class="option-emoji">🌸</span>
+        <div class="option-name">벚꽃 (흐릿하게)</div>
+        <div class="option-desc">뒤로 살짝 보이는 꽃잎</div>
+      </div>
+      <div class="option-card" data-value="뒤에 살짝 보이는 흐릿한 별빛 하늘 배경, 보케 효과로 빛이 몽글몽글">
+        <span class="option-emoji">🌌</span>
+        <div class="option-name">별빛 (흐릿하게)</div>
+        <div class="option-desc">뒤로 살짝 보이는 별빛</div>
+      </div>
+      <div class="option-card" data-value="뒤에 살짝 보이는 흐릿한 꽃밭 배경, 보케 효과로 꽃들이 몽글몽글">
+        <span class="option-emoji">🌷</span>
+        <div class="option-name">꽃밭 (흐릿하게)</div>
+        <div class="option-desc">뒤로 살짝 보이는 꽃밭</div>
+      </div>
+      <div class="option-card" data-value="뒤에 살짝 보이는 흐릿한 따뜻한 카페 배경, 보케 효과로 조명이 몽글몽글">
+        <span class="option-emoji">☕</span>
+        <div class="option-name">카페 (흐릿하게)</div>
+        <div class="option-desc">뒤로 살짝 보이는 조명</div>
+      </div>
+      <div class="option-card" data-value="순수한 단색 배경, 인물이 완벽하게 돋보이는 깔끔한 배경">
+        <span class="option-emoji">🫧</span>
+        <div class="option-name">아주 깔끔한 배경</div>
+        <div class="option-desc">배경 없이 얼굴만 쏙!</div>
+      </div>
+      <div class="option-card" data-value="뒤에 살짝 보이는 흐릿한 빛 방울 배경, 보케 효과로 빛이 동글동글">
+        <span class="option-emoji">✨</span>
+        <div class="option-name">빛 방울 (흐릿하게)</div>
+        <div class="option-desc">뒤로 보이는 빛 방울</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 6. 꾸미기 효과 -->
+  <div class="section">
+    <div class="section-title">💄 얼굴 주변 꾸미기 <span class="badge">꾸미기</span></div>
+    <div class="section-sub">얼굴 가까이에 예쁜 효과를 추가해요! (여러 개 선택 가능)</div>
+    <div class="options-grid" data-group="effect" data-multi="true">
+      <div class="option-card" data-value="눈동자 안에 별과 반짝이는 빛이 들어가 있는 효과, 눈이 보석처럼 빛나게">
+        <span class="option-emoji">👁️</span>
+        <div class="option-name">눈동자 반짝반짝</div>
+        <div class="option-desc">눈 속에 별이 들어있어요</div>
+      </div>
+      <div class="option-card" data-value="얼굴 주변에 투명하고 예쁜 비눗방울들이 둥실둥실 떠다니는 효과">
+        <span class="option-emoji">🫧</span>
+        <div class="option-name">비눗방울</div>
+        <div class="option-desc">예쁜 방울이 둥실둥실</div>
+      </div>
+      <div class="option-card" data-value="얼굴 주변에 금빛·은빛 별 가루와 빛 입자가 흩날리는 효과">
+        <span class="option-emoji">🌟</span>
+        <div class="option-name">별빛 가루</div>
+        <div class="option-desc">금빛·은빛 가루가 흩날려요</div>
+      </div>
+      <div class="option-card" data-value="머리카락 주변에 작은 별과 달 모양 장식들이 반짝이며 떠다니는 효과">
+        <span class="option-emoji">🌙</span>
+        <div class="option-name">별·달 장식</div>
+        <div class="option-desc">머리 주변에 별·달이 떠다녀요</div>
+      </div>
+      <div class="option-card" data-value="볼에 귀여운 분홍 홍조 효과, 캐릭터처럼 사랑스러운 표정">
+        <span class="option-emoji">🌸</span>
+        <div class="option-name">볼 홍조</div>
+        <div class="option-desc">볼이 분홍빛으로 물들어요</div>
+      </div>
+      <div class="option-card" data-value="얼굴과 머리카락 주변에 반딧불이와 작은 빛방울이 날아다니는 효과">
+        <span class="option-emoji">🪄</span>
+        <div class="option-name">빛방울 반딧불</div>
+        <div class="option-desc">작은 빛들이 날아다녀요</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 결과 -->
+  <div class="result-box">
+    <div class="result-label">📋 완성된 프롬프트</div>
+    <div id="prompt-output">
+      <span class="empty-hint">위에서 스타일을 선택하면 여기에 프롬프트가 나타나요 ✨</span>
+    </div>
+    <div class="copy-btn">
+      <button class="btn btn-copy" onclick="copyPrompt()">📋 프롬프트 복사하기</button>
+      <button class="btn btn-reset" onclick="resetAll()">🔄 다시 선택하기</button>
+      <span class="copy-toast" id="toast">✅ 복사됐어요!</span>
+    </div>
+  </div>
+</main>
+
+<script>
+const selections = { style: null, mood: null, color: null, lighting: null, bg: null, effect: [] };
+const TOTAL_REQUIRED = 4;
+
+function updateProgress() {
+  let filled = 0;
+  if (selections.style) filled++;
+  if (selections.mood) filled++;
+  if (selections.color) filled++;
+  if (selections.lighting) filled++;
+  const pct = Math.round((filled / TOTAL_REQUIRED) * 100);
+  document.getElementById('progress-fill').style.width = pct + '%';
+  const labels = ['아직 아무것도 선택하지 않았어요', '조금씩 만들어지고 있어요 🌱', '반 정도 완성됐어요 🎨', '거의 다 됐어요 💫', '완성! 프롬프트를 복사해봐요 🎉'];
+  document.getElementById('step-label').textContent = labels[filled] || labels[0];
+}
+
+function buildPrompt() {
+  const base = "클로즈업 인물 사진, 얼굴이 화면 중앙에 크고 선명하게 가득 차게, 얼굴에 선명한 초점, 배경은 흐릿한 보케 처리로 얼굴이 돋보이게, 아름다운 프로필 사진, 고품질, 세밀한 얼굴 묘사";
+  const parts = [base];
+  if (selections.style) parts.push(selections.style);
+  if (selections.mood) parts.push(selections.mood);
+  if (selections.color) parts.push(selections.color);
+  if (selections.lighting) parts.push(selections.lighting);
+  if (selections.bg) parts.push(selections.bg);
+  if (selections.effect.length > 0) parts.push(selections.effect.join(', '));
+  parts.push("인물이 화면의 70% 이상을 차지, 배경은 완전히 흐릿하게 처리, 아름다운 조명으로 얼굴이 빛나게, 완성도 높은 프로필 이미지");
+  return parts.join(', ');
+}
+
+function updatePrompt() {
+  const out = document.getElementById('prompt-output');
+  const hasAny = selections.style || selections.mood || selections.color || selections.lighting || selections.bg || selections.effect.length > 0;
+  if (!hasAny) {
+    out.innerHTML = '<span class="empty-hint">위에서 스타일을 선택하면 여기에 프롬프트가 나타나요 ✨</span>';
+    return;
+  }
+  out.textContent = buildPrompt();
+}
+
+document.querySelectorAll('.options-grid').forEach(grid => {
+  const group = grid.dataset.group;
+  const isMulti = grid.dataset.multi === 'true';
+  grid.querySelectorAll('.option-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const val = card.dataset.value;
+      if (isMulti) {
+        const idx = selections.effect.indexOf(val);
+        if (idx === -1) { selections.effect.push(val); card.classList.add('selected'); }
+        else { selections.effect.splice(idx, 1); card.classList.remove('selected'); }
+      } else {
+        grid.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+        if (selections[group] === val) { selections[group] = null; }
+        else { selections[group] = val; card.classList.add('selected'); }
+      }
+      updateProgress();
+      updatePrompt();
+    });
+  });
+});
+
+function copyPrompt() {
+  const text = buildPrompt();
+  if (!text) return;
+  navigator.clipboard.writeText(text).then(() => {
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2000);
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2000);
+  });
+}
+
+function resetAll() {
+  selections.style = null; selections.mood = null; selections.color = null;
+  selections.lighting = null; selections.bg = null; selections.effect = [];
+  document.querySelectorAll('.option-card.selected').forEach(c => c.classList.remove('selected'));
+  updateProgress();
+  updatePrompt();
+}
+</script>
+</body>
+</html>
