@@ -75,7 +75,7 @@
             </div>
         </section>
 
-        <!-- 카테고리별 주문서 카드 세션 -->
+        <!-- 카테고리별 주문서 카드 섹션 -->
         <form id="promptForm" class="space-y-10" onsubmit="event.preventDefault();">
             
             <!-- 1. 그림 스타일 (필수) -->
@@ -86,61 +86,53 @@
                     <span class="px-2.5 py-0.5 bg-rose-50 text-rose-500 rounded-full text-xs font-bold border border-rose-100">필수</span>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3" data-category="style" data-required="true">
-                    <!-- 지브리 -->
-                    <button type="button" onclick="selectCard(this, '지브리')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '지브리 스타일')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🌱</span>
                         <span class="font-bold text-slate-800 text-sm">지브리 스타일</span>
                         <span class="text-slate-400 text-xs">토토로처럼 따뜻하고 서정적인 화풍</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 동화책 삽화 -->
-                    <button type="button" onclick="selectCard(this, '동화책 삽화')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '동화책 삽화 느낌')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">📖</span>
                         <span class="font-bold text-slate-800 text-sm">동화책 삽화</span>
                         <span class="text-slate-400 text-xs">포근한 질감의 동화 속 한 장면</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 수채화 -->
-                    <button type="button" onclick="selectCard(this, '수채화')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '맑은 수채화 풍')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🎨</span>
                         <span class="font-bold text-slate-800 text-sm">수채화 스타일</span>
                         <span class="text-slate-400 text-xs">물감이 은은하고 맑게 번지는 느낌</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 웹툰 스타일 -->
-                    <button type="button" onclick="selectCard(this, '웹툰')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '세련된 웹툰 스타일')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">📱</span>
                         <span class="font-bold text-slate-800 text-sm">웹툰 스타일</span>
                         <span class="text-slate-400 text-xs">트렌디하고 깔끔한 한국 웹툰 화풍</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 픽사 3D 스타일 -->
-                    <button type="button" onclick="selectCard(this, '픽사 3D')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '픽사 3D 애니메이션 화풍')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🧸</span>
                         <span class="font-bold text-slate-800 text-sm">픽사 3D 스타일</span>
                         <span class="text-slate-400 text-xs">생동감 넘치는 고퀄리티 애니메이션</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 디즈니 스타일 -->
-                    <button type="button" onclick="selectCard(this, '디즈니')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '디즈니 입체 화풍')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🏰</span>
                         <span class="font-bold text-slate-800 text-sm">디즈니 스타일</span>
                         <span class="text-slate-400 text-xs">꿈과 희망을 주는 클래식 입체 만화</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 실사 스타일 -->
-                    <button type="button" onclick="selectCard(this, '실사')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '생생한 실사 사진 느낌')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">📸</span>
                         <span class="font-bold text-slate-800 text-sm">실사 스타일</span>
                         <span class="text-slate-400 text-xs">카메라로 정교하게 찍어낸 사진 느낌</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 연필 스케치 -->
-                    <button type="button" onclick="selectCard(this, '연필 스케치')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '따뜻한 연필 스케치')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">✏️</span>
                         <span class="font-bold text-slate-800 text-sm">연필 스케치</span>
                         <span class="text-slate-400 text-xs">흑백 선으로 따뜻하게 꾹꾹 눌러 그린 선</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
                 </div>
             </div>
@@ -153,40 +145,35 @@
                     <span class="px-2.5 py-0.5 bg-sky-50 text-sky-500 rounded-full text-xs font-bold border border-sky-100">필수</span>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3" data-category="lighting" data-required="true">
-                    <!-- 자연광 -->
-                    <button type="button" onclick="selectCard(this, '자연광')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-sky-200 hover:bg-sky-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '자연광 조명')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🌿</span>
                         <span class="font-bold text-slate-800 text-sm">자연광</span>
                         <span class="text-slate-400 text-xs">숲속 야외처럼 맑고 자연스러운 일광</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-sky-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 햇살조명 -->
-                    <button type="button" onclick="selectCard(this, '햇살 조명')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-sky-200 hover:bg-sky-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '따스한 햇살 조명')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">☀️</span>
                         <span class="font-bold text-slate-800 text-sm">햇살 조명</span>
                         <span class="text-slate-400 text-xs">창가 사이로 부드럽게 쏟아지는 볕</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-sky-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 스튜디오 조명 -->
-                    <button type="button" onclick="selectCard(this, '스튜디오 조명')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-sky-200 hover:bg-sky-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '전문가 스튜디오 조명')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">📸</span>
                         <span class="font-bold text-slate-800 text-sm">스튜디오 조명</span>
-                        <span class="text-slate-400 text-xs">화보 촬영장처럼 선명하고 정교한 인물 빛</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-sky-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">화보 촬영장처럼 선명한 인물 중심의 빛</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 부드러운 조명 -->
-                    <button type="button" onclick="selectCard(this, '부드러운 조명')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-sky-200 hover:bg-sky-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '부드러운 감성 조명')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">☁️</span>
                         <span class="font-bold text-slate-800 text-sm">부드러운 조명</span>
                         <span class="text-slate-400 text-xs">그늘진 듯 부드럽고 잔잔하게 감싸는 빛</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-sky-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 따뜻한 조명 -->
-                    <button type="button" onclick="selectCard(this, '따뜻한 조명')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-sky-200 hover:bg-sky-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '아늑하고 따뜻한 조명')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🕯️</span>
                         <span class="font-bold text-slate-800 text-sm">따뜻한 조명</span>
                         <span class="text-slate-400 text-xs">노란 촛불처럼 마음을 편안히 녹이는 색감</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-sky-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
                 </div>
             </div>
@@ -198,41 +185,62 @@
                     <h2 class="text-xl font-bold text-slate-800">헤어스타일</h2>
                     <span class="px-2.5 py-0.5 bg-slate-100 text-slate-500 rounded-full text-xs font-bold border border-slate-200">선택</span>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3" data-category="hair" data-required="false">
-                    <!-- 단발 -->
-                    <button type="button" onclick="selectCard(this, '단발머리')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-emerald-200 hover:bg-emerald-50/20 smooth-transition relative flex flex-col gap-1">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3" data-category="hair" data-required="false">
+                    <!-- 여성 단발 -->
+                    <button type="button" onclick="selectCard(this, '찰랑이는 단발 헤어')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">👩</span>
-                        <span class="font-bold text-slate-800 text-sm">단발머리</span>
-                        <span class="text-slate-400 text-xs">어깨 끝선에 맞춰 똑 떨어진 가벼운 머리</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-emerald-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="font-bold text-slate-800 text-sm">단발머리 (여자 추천)</span>
+                        <span class="text-slate-400 text-xs">어깨 끝선에 맞춰 똑 떨어진 가벼운 단발</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 긴머리 -->
-                    <button type="button" onclick="selectCard(this, '긴 생머리')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-emerald-200 hover:bg-emerald-50/20 smooth-transition relative flex flex-col gap-1">
+                    <!-- 여성 긴머리 -->
+                    <button type="button" onclick="selectCard(this, '수려한 긴 머리')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">👧</span>
-                        <span class="font-bold text-slate-800 text-sm">긴 생머리</span>
-                        <span class="text-slate-400 text-xs">바람에 찰랑찰랑 흩날리는 수려하고 긴 머리</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-emerald-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="font-bold text-slate-800 text-sm">긴 생머리 (여자 추천)</span>
+                        <span class="text-slate-400 text-xs">바람에 찰랑찰랑 흩날리는 생생한 긴 생머리</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 웨이브 -->
-                    <button type="button" onclick="selectCard(this, '웨이브 헤어')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-emerald-200 hover:bg-emerald-50/20 smooth-transition relative flex flex-col gap-1">
+                    <!-- 여성 웨이브 -->
+                    <button type="button" onclick="selectCard(this, '우아한 웨이브 스타일')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">👩‍🦱</span>
-                        <span class="font-bold text-slate-800 text-sm">웨이브 헤어</span>
-                        <span class="text-slate-400 text-xs">우아하고 부드럽게 볼륨이 말려 흐르는 스타일</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-emerald-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="font-bold text-slate-800 text-sm">웨이브 헤어 (여자 추천)</span>
+                        <span class="text-slate-400 text-xs">부드럽게 볼륨이 휘감겨 굽이치는 스타일</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                    </button>
+                    <!-- 남성 차분한 머리 -->
+                    <button type="button" onclick="selectCard(this, '단정하고 차분하게 내린 머리')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
+                        <span class="text-2xl mb-1">👦</span>
+                        <span class="font-bold text-slate-800 text-sm">차분하게 내린 머리 (남자 추천)</span>
+                        <span class="text-slate-400 text-xs">앞머리를 이마 위로 예쁘고 얌전하게 내린 스타일</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                    </button>
+                    <!-- 남성 멋쟁이 올림머리 -->
+                    <button type="button" onclick="selectCard(this, '이마가 보이게 뒤로 넘겨 올린 머리')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
+                        <span class="text-2xl mb-1">👨‍💼</span>
+                        <span class="font-bold text-slate-800 text-sm">멋쟁이 올림머리 (남자 추천)</span>
+                        <span class="text-slate-400 text-xs">이마가 쏙 보이도록 깔끔하게 뒤로 넘긴 머리</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                    </button>
+                    <!-- 남성 가르마 웨이브 머리 -->
+                    <button type="button" onclick="selectCard(this, '가르마를 타서 부드럽게 넘긴 머리')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
+                        <span class="text-2xl mb-1">🧑‍🦱</span>
+                        <span class="font-bold text-slate-800 text-sm">가르마 웨이브 머리 (남자 추천)</span>
+                        <span class="text-slate-400 text-xs">이마를 양쪽으로 살짝 나누어 부드러운 물결을 준 스타일</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
                     <!-- 자연스러운 스타일 -->
-                    <button type="button" onclick="selectCard(this, '자연스러운 스타일의 머리')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-emerald-200 hover:bg-emerald-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '자연스럽게 정돈된 스타일')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🍃</span>
                         <span class="font-bold text-slate-800 text-sm">자연스러운 스타일</span>
-                        <span class="text-slate-400 text-xs">꾸미지 않은 듯 내추럴하고 단정한 느낌</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-emerald-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">꾸미지 않은 듯 내추럴하고 단정한 본연의 느낌</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 선택 안 함 (맨 마지막 배치) -->
-                    <button type="button" onclick="selectCard(this, 'skip')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-emerald-200 hover:bg-emerald-50/20 smooth-transition relative flex flex-col gap-1 bg-slate-50/50">
+                    <!-- 선택 안 함 (맨 뒤 고정) -->
+                    <button type="button" onclick="selectCard(this, 'skip')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1 bg-slate-50/50">
                         <span class="text-2xl mb-1">🚫</span>
                         <span class="font-bold text-slate-600 text-sm">선택 안 함</span>
-                        <span class="text-slate-400 text-xs">원래 내 사진의 헤어스타일을 유지할게요</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-emerald-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">원래 내 사진의 헤어스타일을 그대로 쓸래요</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
                 </div>
             </div>
@@ -245,66 +253,58 @@
                     <span class="px-2.5 py-0.5 bg-slate-100 text-slate-500 rounded-full text-xs font-bold border border-slate-200">선택</span>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3" data-category="expression" data-required="false">
-                    <!-- 환하게 웃기 -->
-                    <button type="button" onclick="selectCard(this, '환하게 웃고 있는 표정')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-amber-200 hover:bg-amber-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '환하게 활짝 웃는 표정')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">😆</span>
                         <span class="font-bold text-slate-800 text-sm">환하게 웃기</span>
-                        <span class="text-slate-400 text-xs">보는 사람도 덩달아 기분 좋아지는 시원한 미소</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-amber-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">기분 좋아지는 상큼하고 시원한 미소</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 살짝 미소 -->
-                    <button type="button" onclick="selectCard(this, '살짝 잔잔한 미소를 지은 표정')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-amber-200 hover:bg-amber-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '살짝 수줍은 미소를 지은 모습')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🙂</span>
                         <span class="font-bold text-slate-800 text-sm">살짝 미소</span>
                         <span class="text-slate-400 text-xs">수줍고 상냥하게 머금은 잔잔한 미소</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-amber-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 윙크하기 -->
-                    <button type="button" onclick="selectCard(this, '장난기 어린 윙크를 하는 표정')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-amber-200 hover:bg-amber-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '장난스럽게 윙크를 건네는 모습')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">😉</span>
                         <span class="font-bold text-slate-800 text-sm">윙크하기</span>
-                        <span class="text-slate-400 text-xs">장난스럽고 톡톡 튀는 발랄한 매력 연출</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-amber-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">장난스럽고 톡톡 튀는 발랄한 매력</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 자신감 있는 표정 -->
-                    <button type="button" onclick="selectCard(this, '자신감 넘치는 당당한 표정')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-amber-200 hover:bg-amber-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '당당하고 자신감 넘치는 눈빛')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">😎</span>
                         <span class="font-bold text-slate-800 text-sm">자신감 있는 표정</span>
-                        <span class="text-slate-400 text-xs">나를 당당하게 표현하는 멋지고 스마트한 무드</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-amber-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">나를 당당하게 표현하는 스마트한 무드</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 진지한 표정 -->
-                    <button type="button" onclick="selectCard(this, '깊은 사색에 잠긴 진지한 표정')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-amber-200 hover:bg-amber-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '사색에 잠긴 듯 진지한 표정')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🤔</span>
                         <span class="font-bold text-slate-800 text-sm">진지한 표정</span>
-                        <span class="text-slate-400 text-xs">차분하고 성숙하며 깊은 감성이 가득한 눈빛</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-amber-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">차분하고 성숙하며 감성이 깃든 분위기</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 밝고 활기찬 표정 -->
-                    <button type="button" onclick="selectCard(this, '밝고 활기찬 생기 가득한 표정')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-amber-200 hover:bg-amber-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '생기 가득하고 활기찬 무드')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">✨</span>
                         <span class="font-bold text-slate-800 text-sm">밝고 활기찬 표정</span>
-                        <span class="text-slate-400 text-xs">긍정적이고 비타민 같은 해피 에너지 발산</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-amber-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">긍정적이고 유쾌한 해피 에너지 발산</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 자연스러운 표정 -->
-                    <button type="button" onclick="selectCard(this, '자연스럽고 편안한 무표정')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-amber-200 hover:bg-amber-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '편안하고 자연스러운 모습')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">😌</span>
                         <span class="font-bold text-slate-800 text-sm">자연스러운 표정</span>
-                        <span class="text-slate-400 text-xs">평화로운 휴일의 일상처럼 가장 자연스러운 나</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-amber-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">꾸밈없는 휴일처럼 평온하고 자연스러운 나</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 선택 안 함 (맨 마지막 배치) -->
-                    <button type="button" onclick="selectCard(this, 'skip')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-amber-200 hover:bg-amber-50/20 smooth-transition relative flex flex-col gap-1 bg-slate-50/50">
+                    <button type="button" onclick="selectCard(this, 'skip')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1 bg-slate-50/50">
                         <span class="text-2xl mb-1">🚫</span>
                         <span class="font-bold text-slate-600 text-sm">선택 안 함</span>
-                        <span class="text-slate-400 text-xs">원본 사진 그대로의 표정을 사용하고 싶어요</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-amber-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">원본 사진 그대로의 표정을 유지할게요</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
                 </div>
             </div>
 
-            <!-- 5. 의상 종류 (선택) -->
+            <!-- 5. 의상 스타일 (선택) -->
             <div class="bg-white rounded-3xl p-6 shadow-sm border border-rose-100 smooth-transition">
                 <div class="flex items-center gap-2 mb-5">
                     <span class="text-2xl">👕</span>
@@ -312,66 +312,52 @@
                     <span class="px-2.5 py-0.5 bg-slate-100 text-slate-500 rounded-full text-xs font-bold border border-slate-200">선택</span>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3" data-category="outfit" data-required="false">
-                    <!-- 교복 -->
-                    <button type="button" onclick="selectCard(this, '단정한 학교 교복을 입은')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '단정한 교복 차림')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🏫</span>
                         <span class="font-bold text-slate-800 text-sm">교복</span>
-                        <span class="text-slate-400 text-xs">단정하고 풋풋한 학생 시절 학창시절 무드</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">풋풋하고 단정한 학창시절의 학생 스타일</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 후드티 -->
-                    <button type="button" onclick="selectCard(this, '캐주얼한 오버사이즈 후드티를 입은')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '편안한 후드티 코디')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🧥</span>
                         <span class="font-bold text-slate-800 text-sm">후드티</span>
-                        <span class="text-slate-400 text-xs">힙하고 편안해 보이는 데일리 후드 스타일</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">힙하고 편안해 보이는 감성 스트릿 코디</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 캐주얼 -->
-                    <button type="button" onclick="selectCard(this, '세련된 캐주얼 스타일 의상을 입은')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '세련된 일상 캐주얼 룩')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">👖</span>
                         <span class="font-bold text-slate-800 text-sm">캐주얼</span>
-                        <span class="text-slate-400 text-xs">심플하고 유행을 타지 않는 무난한 일상복</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">심플하고 깔끔한 에센셜 데일리 코디</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 니트 -->
-                    <button type="button" onclick="selectCard(this, '포근하고 따뜻한 짜임새의 니트를 입은')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '따스하고 포근한 니트웨어')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🧶</span>
-                        <span class="font-bold text-slate-800 text-sm">니트웨어</span>
-                        <span class="text-slate-400 text-xs">포근하고 따스한 감수성이 느껴지는 코디</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="font-bold text-slate-800 text-sm">니트</span>
+                        <span class="text-slate-400 text-xs">포근한 재질감이 전하는 아늑한 비주얼</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 운동복 -->
-                    <button type="button" onclick="selectCard(this, '활동적인 스포티한 운동복을 입은')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '스포티하고 활기찬 운동복')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">👟</span>
                         <span class="font-bold text-slate-800 text-sm">운동복</span>
-                        <span class="text-slate-400 text-xs">건강미와 액티브한 멋이 가득 찬 스포티룩</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">건강미와 액티브한 무드가 도드라지는 룩</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 한복 -->
-                    <button type="button" onclick="selectCard(this, '고운 전통 한복을 차려입은')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '고운 전통 한복 차림')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🎎</span>
-                        <span class="font-bold text-slate-800 text-sm">전통 한복</span>
-                        <span class="text-slate-400 text-xs">우아하고 부드러운 한국 정통의 고전미</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="font-bold text-slate-800 text-sm">한복</span>
+                        <span class="text-slate-400 text-xs">선이 아름답고 단아한 한국 고유의 미복</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 드레스 -->
-                    <button type="button" onclick="selectCard(this, '화려하고 우아한 드레스를 입은')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1">
-                        <span class="text-2xl mb-1">👗</span>
-                        <span class="font-bold text-slate-800 text-sm">페어리 드레스</span>
-                        <span class="text-slate-400 text-xs">파티 주인공처럼 우아하고 반짝이는 화려함</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
-                    </button>
-                    <!-- 선택 안 함 (맨 마지막 배치) -->
-                    <button type="button" onclick="selectCard(this, 'skip')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-rose-200 hover:bg-rose-50/20 smooth-transition relative flex flex-col gap-1 bg-slate-50/50">
+                    <button type="button" onclick="selectCard(this, 'skip')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1 bg-slate-50/50">
                         <span class="text-2xl mb-1">🚫</span>
                         <span class="font-bold text-slate-600 text-sm">선택 안 함</span>
-                        <span class="text-slate-400 text-xs">내가 입고 있는 원래 옷 그대로 반영할게요</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">내가 입고 있는 원래 옷을 그대로 반영할래요</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
                 </div>
             </div>
 
-            <!-- 6. 배경 (인물 중심) - Teal 스펙트럼 매치 (선택) -->
+            <!-- 6. 배경 (인물 중심) -->
             <div class="bg-white rounded-3xl p-6 shadow-sm border border-teal-100 smooth-transition">
                 <div class="flex items-center gap-2 mb-5">
                     <span class="text-2xl">🏞️</span>
@@ -379,126 +365,111 @@
                     <span class="px-2.5 py-0.5 bg-slate-100 text-slate-500 rounded-full text-xs font-bold border border-slate-200">선택</span>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" data-category="background" data-required="false">
-                    <!-- 깔끔한 단색 스튜디오 -->
-                    <button type="button" onclick="selectCard(this, '깔끔한 단색 스튜디오 배경 속에서')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-teal-200 hover:bg-teal-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '깔끔한 단색 스튜디오 공간')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🏛️</span>
                         <span class="font-bold text-slate-800 text-sm">단색 스튜디오</span>
-                        <span class="text-slate-400 text-xs">인물이 가장 예쁘게 돋보이는 모던한 실내</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-teal-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">인물이 입체적으로 돋보이는 모던한 실내</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 초점이 흐려진 야외 -->
-                    <button type="button" onclick="selectCard(this, '초점이 아름답게 흐려진 감성 야외를 배경으로')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-teal-200 hover:bg-teal-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '초점이 흐려진 야외 배경')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🌲</span>
-                        <span class="font-bold text-slate-800 text-sm">아웃포커싱 야외</span>
-                        <span class="text-slate-400 text-xs">배경은 뽀얗게 날아가고 나만 선명해지는 구도</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-teal-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="font-bold text-slate-800 text-sm">초점이 흐려진 야외</span>
+                        <span class="text-slate-400 text-xs">배경은 보랏빛으로 흐려지고 인물만 강조되는 앵글</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 심플한 흰색 벽면 -->
-                    <button type="button" onclick="selectCard(this, '심플한 미니멀 흰색 벽면 앞에서')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-teal-200 hover:bg-teal-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '심플한 흰색 벽면 앞')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">⬜</span>
-                        <span class="font-bold text-slate-800 text-sm">화이트 미니멀 벽</span>
-                        <span class="text-slate-400 text-xs">잡념 없이 나 자체에 완전히 몰입하는 깔끔함</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-teal-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="font-bold text-slate-800 text-sm">심플한 흰색 벽면</span>
+                        <span class="text-slate-400 text-xs">군더더기 없이 단정하고 심플한 기본 흰 벽</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 부드러운 무지 배경 -->
-                    <button type="button" onclick="selectCard(this, '은은한 색감의 부드러운 무지 배경을 뒤로한 채')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-teal-200 hover:bg-teal-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '부드러운 무지 배경 속')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🌸</span>
-                        <span class="font-bold text-slate-800 text-sm">소프트 파스텔 무지</span>
-                        <span class="text-slate-400 text-xs">연한 파스텔 색감으로 포근하게 받쳐주는 배경</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-teal-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="font-bold text-slate-800 text-sm">부드러운 무지 배경</span>
+                        <span class="text-slate-400 text-xs">은은한 파스텔 단색으로 채워 포근한 레이아웃</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 창가 자연광 배경 -->
-                    <button type="button" onclick="selectCard(this, '햇살이 비치는 예쁜 창가 배경 앞에서')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-teal-200 hover:bg-teal-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '자연광이 쏟아지는 창가')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🪟</span>
-                        <span class="font-bold text-slate-800 text-sm">창가 오후 햇살</span>
-                        <span class="text-slate-400 text-xs">영화 스틸컷처럼 아늑한 휴일의 빈티지 감성</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-teal-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="font-bold text-slate-800 text-sm">창가 자연광 배경</span>
+                        <span class="text-slate-400 text-xs">창문 틈새로 아늑한 오후 빛이 들어오는 풍경</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 은은한 질감 종이 -->
-                    <button type="button" onclick="selectCard(this, '빈티지한 미세 질감이 있는 부드러운 종이 배경 위에')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-teal-200 hover:bg-teal-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '은은한 질감의 종이 배경')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">📄</span>
-                        <span class="font-bold text-slate-800 text-sm">질감 종이 배경</span>
-                        <span class="text-slate-400 text-xs">아날로그 캔버스의 따뜻하고 편안한 질감</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-teal-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="font-bold text-slate-800 text-sm">은은한 질감 종이</span>
+                        <span class="text-slate-400 text-xs">아날로그 도화지의 포근하고 클래식한 질감</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 선택 안 함 (맨 마지막 배치) -->
-                    <button type="button" onclick="selectCard(this, 'skip')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-teal-200 hover:bg-teal-50/20 smooth-transition relative flex flex-col gap-1 bg-slate-50/50 md:col-span-3">
+                    <button type="button" onclick="selectCard(this, 'skip')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1 bg-slate-50/50 md:col-span-3">
                         <span class="text-2xl mb-1">🚫</span>
                         <span class="font-bold text-slate-600 text-sm">선택 안 함</span>
-                        <span class="text-slate-400 text-xs">실제 촬영된 오리지널 공간 상태를 그대로 살릴래요</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-teal-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">촬영된 실제 방 공간 요소를 그대로 살릴래요</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
                 </div>
             </div>
 
-            <!-- 7. 마법 효과 (선택) - Purple 스펙트럼 매치 -->
+            <!-- 7. 마법 효과 (중복 선택 가능) -->
             <div class="bg-white rounded-3xl p-6 shadow-sm border border-purple-100 smooth-transition">
                 <div class="flex items-center gap-2 mb-5">
                     <span class="text-2xl">🪄</span>
                     <h2 class="text-xl font-bold text-slate-800">마법 효과 (인물 주변)</h2>
-                    <span class="px-2.5 py-0.5 bg-slate-100 text-slate-500 rounded-full text-xs font-bold border border-slate-200">선택</span>
+                    <span class="px-2.5 py-0.5 bg-purple-50 text-purple-500 rounded-full text-xs font-bold border border-purple-100">중복 선택 가능</span>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3" data-category="effect" data-required="false">
-                    <!-- 반짝이는 가루 -->
-                    <button type="button" onclick="selectCard(this, '반짝이는 금빛 마법 가루가 휘날리고')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-200 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '반짝이는 가루가 흩날리는 효과')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">✨</span>
                         <span class="font-bold text-slate-800 text-sm">반짝이는 가루</span>
-                        <span class="text-slate-400 text-xs">피터팬 요정처럼 은은하게 떠다니는 빛무리</span>
+                        <span class="text-slate-400 text-xs">요정처럼 은은하게 떠다니는 신비로운 소스</span>
                         <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 얼굴 옆 빛 번짐 -->
-                    <button type="button" onclick="selectCard(this, '얼굴 주변에 화사하고 은은한 렌즈 플레어 빛 번짐이 스며들며')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-200 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '화사하게 피어나는 얼굴 옆 빛 번짐')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🔆</span>
                         <span class="font-bold text-slate-800 text-sm">얼굴 옆 빛 번짐</span>
-                        <span class="text-slate-400 text-xs">아지랑이처럼 얼굴 옆을 살포시 비추는 광원 효과</span>
+                        <span class="text-slate-400 text-xs">햇살 오라처럼 인물 주위를 밝히는 감성 번짐</span>
                         <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 살랑이는 미풍 -->
-                    <button type="button" onclick="selectCard(this, '살랑이는 기분 좋은 미풍이 머릿결을 부드럽게 감돌며')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-200 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '머릿결을 스치는 살랑이는 미풍')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🍃</span>
                         <span class="font-bold text-slate-800 text-sm">살랑이는 미풍</span>
-                        <span class="text-slate-400 text-xs">부드러운 한 줄기 바람이 머리를 스쳐 지나가는 무드</span>
+                        <span class="text-slate-400 text-xs">바람이 한 가닥 불어와 역동성을 주는 생기</span>
                         <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 부드러운 안개 -->
-                    <button type="button" onclick="selectCard(this, '신비롭고 부드러운 하얀 안개가 몽환적으로 흩어지고')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-200 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '몽환적이고 부드러운 안개 수풀')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🌫️</span>
                         <span class="font-bold text-slate-800 text-sm">부드러운 안개</span>
-                        <span class="text-slate-400 text-xs">새벽 숲길 정령처럼 몽환적이고 아련한 깊이감</span>
+                        <span class="text-slate-400 text-xs">몽환적인 구름 속에 파묻힌 듯 깊이감 부여</span>
                         <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 투명한 비눗방울 -->
-                    <button type="button" onclick="selectCard(this, '오색빛깔로 반짝이는 투명한 비눗방울들이 몽글몽글 떠다니고')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-200 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '비눗방울이 방울방울 맺히는 효과')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🧼</span>
-                        <span class="font-bold text-slate-800 text-sm">투명 비눗방울</span>
-                        <span class="text-slate-400 text-xs">비눗방울들이 방울방울 맺혀 동화적인 생기 부여</span>
+                        <span class="font-bold text-slate-800 text-sm">투명한 비눗방울</span>
+                        <span class="text-slate-400 text-xs">동화적인 비눗방울들이 몽글몽글 떠다니는 이펙트</span>
                         <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 눈동자 속 별빛 -->
-                    <button type="button" onclick="selectCard(this, '눈동자 속에 맑고 아름다운 별빛이 영롱하게 차오르고')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-200 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '영롱하게 반짝이는 눈동자 속 별빛')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">👁️</span>
                         <span class="font-bold text-slate-800 text-sm">눈동자 속 별빛</span>
-                        <span class="text-slate-400 text-xs">눈빛에 별처럼 총명하고 투명한 입체 반사광 장식</span>
+                        <span class="text-slate-400 text-xs">눈빛 속에 촉촉하고 맑은 별빛 반사광을 추가</span>
                         <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 흩날리는 꽃잎 -->
-                    <button type="button" onclick="selectCard(this, '아름다운 분홍빛 꽃잎들이 주변으로 흩날려 흩어지며')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-200 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '분홍빛 꽃잎들이 흩날리는 무드')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🌸</span>
                         <span class="font-bold text-slate-800 text-sm">흩날리는 꽃잎</span>
-                        <span class="text-slate-400 text-xs">로맨틱한 벚꽃 앤딩처럼 살며시 흩날리는 생기</span>
+                        <span class="text-slate-400 text-xs">봄날 벚꽃 엔딩처럼 낭만적으로 날리는 연출</span>
                         <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 따뜻한 광채 -->
-                    <button type="button" onclick="selectCard(this, '몸 주변으로 포근하고 아늑한 황금빛 광채가 은은하게 도는')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-200 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '황금색 오라 형태의 따뜻한 광채')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">✨</span>
                         <span class="font-bold text-slate-800 text-sm">따뜻한 광채</span>
-                        <span class="text-slate-400 text-xs">인물 윤곽 전체에서 포근하고 성스러운 오라 발산</span>
+                        <span class="text-slate-400 text-xs">인물 외곽선에 은은하게 타오르는 후광 마법</span>
                         <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
                 </div>
             </div>
 
-            <!-- 8. 구도 (인물 중심) - Indigo 스펙트럼 매칭 (맨 마지막 배치) -->
+            <!-- 8. 구도 (인물 중심) -->
             <div class="bg-white rounded-3xl p-6 shadow-sm border border-indigo-100 smooth-transition">
                 <div class="flex items-center gap-2 mb-5">
                     <span class="text-2xl">📐</span>
@@ -506,70 +477,63 @@
                     <span class="px-2.5 py-0.5 bg-rose-50 text-rose-500 rounded-full text-xs font-bold border border-rose-100">필수</span>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" data-category="composition" data-required="true">
-                    <!-- 얼굴 초밀착 -->
-                    <button type="button" onclick="selectCard(this, '얼굴이 아주 밀착되어 이목구비가 가득 찬 극초밀착 앵글')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-indigo-200 hover:bg-indigo-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '얼굴 초밀착 익스트림 뷰')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">👀</span>
-                        <span class="font-bold text-slate-800 text-sm">얼굴 극초밀착</span>
-                        <span class="text-slate-400 text-xs">얼굴 가득 시선을 압도하는 강렬한 클로즈 익스트림업</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-indigo-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="font-bold text-slate-800 text-sm">얼굴 초밀착</span>
+                        <span class="text-slate-400 text-xs">화면을 꽉 채워 이목구비 감성을 극대화한 클로즈업</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 얼굴 클로즈업 -->
-                    <button type="button" onclick="selectCard(this, '이목구비가 아름답게 집중된 표준 클로즈업 앵글')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-indigo-200 hover:bg-indigo-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '얼굴 클로즈업 샷')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">👤</span>
                         <span class="font-bold text-slate-800 text-sm">얼굴 클로즈업</span>
-                        <span class="text-slate-400 text-xs">얼굴 선과 세밀한 감수성이 완벽히 조화되는 구도</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-indigo-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">눈빛과 안면 묘사가 균형적으로 강조되는 스탠다드 앵글</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 어깨 위 상반신 -->
-                    <button type="button" onclick="selectCard(this, '어깨선 위쪽이 우아하게 잡힌 미디엄 클로즈업')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-indigo-200 hover:bg-indigo-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '어깨 위 상반신 바스트 샷')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">👚</span>
                         <span class="font-bold text-slate-800 text-sm">어깨 위 상반신</span>
-                        <span class="text-slate-400 text-xs">증명사진이나 프로필 사진처럼 안정적인 어깨 구도</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-indigo-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">프로필이나 증명사진처럼 안정감 넘치는 프레임</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 허리 위 상반신 -->
-                    <button type="button" onclick="selectCard(this, '허리 라인부터 가슴 윗선까지 시원하게 보이는 미디엄 샷')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-indigo-200 hover:bg-indigo-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '허리 위 상반신 웨이스트 샷')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🧍</span>
                         <span class="font-bold text-slate-800 text-sm">허리 위 상반신</span>
-                        <span class="text-slate-400 text-xs">옷 무드와 포즈가 한껏 우아하게 살아나는 상반신</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-indigo-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">포즈와 옷 스타일까지 시원하게 눈에 들어오는 반신 구도</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 인물 중심 정면 -->
-                    <button type="button" onclick="selectCard(this, '카메라 정면을 똑바로 지긋이 응시하는 정밀 대칭형 구도')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-indigo-200 hover:bg-indigo-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '인물 중심 정면 구도')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">🎯</span>
                         <span class="font-bold text-slate-800 text-sm">인물 중심 정면</span>
-                        <span class="text-slate-400 text-xs">시청자와 눈을 직접 맞추며 가장 정직하고 당당한 구도</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-indigo-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">카메라 정면을 똑바로 응시해 정직하고 신뢰도 높은 구도</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
-                    <!-- 옆모습 프로필 -->
-                    <button type="button" onclick="selectCard(this, '얼굴의 우아한 옆선이 미학적으로 드러나는 프로필 앵글')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-indigo-200 hover:bg-indigo-50/20 smooth-transition relative flex flex-col gap-1">
+                    <button type="button" onclick="selectCard(this, '우아한 옆모습 프로필 샷')" class="option-card p-4 rounded-2xl border border-slate-100 text-left hover:border-purple-400 hover:bg-purple-50/20 smooth-transition relative flex flex-col gap-1">
                         <span class="text-2xl mb-1">📐</span>
                         <span class="font-bold text-slate-800 text-sm">옆모습 프로필</span>
-                        <span class="text-slate-400 text-xs">콧대와 턱 끝선 감성이 돋보이는 몽환적 옆모습</span>
-                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-indigo-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
+                        <span class="text-slate-400 text-xs">턱 선과 실루엣이 감성 영화처럼 정교하게 잡히는 샷</span>
+                        <span class="check-badge absolute top-3 right-3 w-5 h-5 rounded-full bg-purple-500 text-white text-[10px] flex items-center justify-center opacity-0 scale-75 smooth-transition">✓</span>
                     </button>
                 </div>
             </div>
 
         </form>
 
-        <!-- 중간 인터랙티브 버튼 (무작위 주문 조합) -->
-        <div class="flex justify-center py-2">
-            <button type="button" onclick="randomMagic()" class="bg-gradient-to-r from-amber-400 to-rose-500 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 smooth-transition text-base flex items-center gap-2">
-                🔮 마법의 무작위 주문 (랜덤)
-            </button>
-        </div>
-
         <!-- 하단 골드 드로잉 티켓 섹션 -->
         <section class="gold-ticket rounded-3xl p-6 md:p-8 space-y-5">
             <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                    <span class="text-2xl text-amber-500">✨</span>
-                    <h2 class="text-xl font-extrabold text-amber-800 tracking-tight">나의 마법 사진 주문서</h2>
+                <div class="flex flex-col">
+                    <span class="text-xs text-amber-600 font-bold tracking-wider uppercase opacity-80 mb-0.5">나의 마법 문장</span>
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-lg">✨</span>
+                        <h2 class="text-lg font-extrabold text-amber-800 tracking-tight">(터치해서 수정 가능)</h2>
+                    </div>
                 </div>
-                <div class="flex gap-2">
-                    <button onclick="resetAll()" class="text-xs bg-amber-100 hover:bg-amber-200/80 text-amber-800 font-bold px-3 py-1.5 rounded-full smooth-transition">
-                        🔄 비우기
+                <div class="flex items-center gap-1.5">
+                    <button type="button" onclick="randomMagic()" class="text-xs bg-gradient-to-r from-amber-400 to-rose-400 hover:from-amber-500 hover:to-rose-500 text-white font-bold px-3 py-1.5 rounded-full shadow-sm hover:scale-105 active:scale-95 smooth-transition flex items-center gap-1">
+                        🔮 무작위 조합
+                    </button>
+                    <button onclick="resetAll()" class="text-xs bg-amber-100 hover:bg-amber-200 text-amber-800 font-bold px-3 py-1.5 rounded-full smooth-transition">
+                        🔄 다시 선택하기
                     </button>
                 </div>
             </div>
@@ -577,7 +541,7 @@
             <!-- 한글 조합 주문서 (수정 가능) -->
             <div class="relative bg-white/70 border border-amber-200/80 rounded-2xl p-4 md:p-6 shadow-inner">
                 <div id="sentenceContainer" contenteditable="true" class="text-slate-700 font-medium text-base md:text-lg leading-relaxed focus:outline-none min-h-[60px]" placeholder="선택지를 고르면 주문이 여기에 정성스럽게 작성됩니다.">
-                    위 카드에서 원하는 가치를 선택하면 나만의 특별한 주문 문장이 이 자리에 생성됩니다! 직접 클릭해서 직접 한글로 타이핑해 수정할 수도 있어요.
+                    이 사진을 <span class="text-slate-400">____</span> (으)로 만들어줘
                 </div>
                 <div class="absolute right-3 bottom-3 text-amber-500/50 text-xs select-none pointer-events-none">
                     ✍️ 수정 가능
@@ -586,7 +550,7 @@
 
             <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
                 <button onclick="copyToClipboard('sentenceContainer')" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white font-bold py-4 px-8 rounded-2xl shadow smooth-transition text-base flex items-center justify-center gap-2">
-                    📋 한글 주문서 복사하기
+                    주문서 복사하기 📋
                 </button>
                 <p class="text-amber-700/70 text-xs text-center sm:text-left font-medium">
                     복사한 소중한 주문서 문장을 프롬프트 입력창에 붙여넣어 완벽한 사진을 만들어 보세요!
@@ -601,14 +565,15 @@
         <span class="text-amber-400">✨</span> <span id="toastMessage">성공적으로 작성되었습니다!</span>
     </div>
 
-    <!-- 우측 하단 버전 표시 배지 (v1.2.0) -->
+    <!-- 우측 하단 버전 표시 배지 (v1.3.3) -->
     <div class="fixed bottom-4 right-4 bg-slate-900/90 text-slate-300 text-[10px] md:text-xs font-mono py-1.5 px-3 rounded-full shadow-lg flex items-center gap-2 border border-slate-800 select-none z-40">
         <span class="live-dot w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span>Version 1.2.0 (Stable)</span>
+        <span>Version 1.3.3 (Stable)</span>
     </div>
 
+    <!-- Core Scripts -->
     <script>
-        // 전역 선택 상태 저장소
+        // 전역 선택 상태 저장소 (마법 효과만 Array로 관리)
         const selections = {
             style: '',
             lighting: '',
@@ -616,153 +581,239 @@
             expression: '',
             outfit: '',
             background: '',
-            effect: '',
+            effect: [], // 다중 선택용 배열
             composition: ''
         };
 
-        // 수동 카드 선택 제어기
+        // 고급 서정적 묘사를 위한 한글 번역/확장용 매핑 사전 (image_403480.png 및 유저 피드백 기반 최고급 표현 적용)
+        const descriptiveMap = {
+            // 1. 그림 스타일
+            '지브리 스타일': '포근하고 따뜻한 감성이 흐르는 서정적인 지브리 애니메이션 화풍',
+            '동화책 삽화 느낌': '포근하고 사랑스러운 동화책 삽화 질감',
+            '맑은 수채화 풍': '맑고 은은한 물감이 투명하게 번지는 수채화 풍',
+            '세련된 웹툰 스타일': '선이 깔끔하고 세련된 한국 웹툰 스타일',
+            '픽사 3D 애니메이션 화풍': '생동감 넘치고 입체적인 픽사 3D 애니메이션 화풍',
+            '디즈니 입체 화풍': '꿈과 희망을 품은 클래식 디즈니 입체 화풍',
+            '생생한 실사 사진 느낌': '렌즈로 포착한 듯 또렷하고 생생한 실사 사진 느낌',
+            '따뜻한 연필 스케치': '손으로 정성껏 꾹꾹 눌러 그린 흑백 연필 스케치',
+
+            // 2. 조명 & 분위기
+            '자연광 조명': '숲속 야외처럼 맑고 자연스러운 햇살 아래의 일광',
+            '따스한 햇살 조명': '창가 사이로 부드럽게 쏟아지는 따스한 햇살 조명',
+            '전문가 스튜디오 조명': '티없이 화사한 뽀얀 고광량 스튜디오 라이팅',
+            '부드러운 감성 조명': '그늘진 듯 부드럽고 잔잔하게 얼굴을 감싸는 감성 조명',
+            '아늑하고 따뜻한 조명': '노란 촛불처럼 마음을 편안하게 녹여주는 따뜻한 조명',
+
+            // 3. 헤어스타일
+            '찰랑이는 단발 헤어': '어깨 끝선에 맞춰 똑 단정하게 떨어지는 가볍고 찰랑이는 단발머리',
+            '수려한 긴 머리': '바람에 부드럽게 찰랑이며 흩날리는 수려한 긴 생머리',
+            '우아한 웨이브 스타일': '우아하고 부드러운 곡선 웨이브 헤어',
+            '단정하고 차분하게 내린 머리': '앞머리를 이마 위로 예쁘고 얌전하게 내린 차분한 스타일',
+            '이마가 보이게 뒤로 넘겨 올린 머리': '이마가 시원하게 보이도록 깔끔하게 뒤로 넘겨 올린 멋쟁이 올림머리',
+            '가르마를 타서 부드럽게 넘긴 머리': '이마를 양쪽으로 살짝 나누어 부드러운 물결을 준 가르마 웨이브 머리',
+            '자연스럽게 정돈된 스타일': '꾸미지 않은 듯 내추럴하고 단정하게 정돈된 머리',
+
+            // 4. 표정
+            '환하게 활짝 웃는 표정': '보는 사람의 마음까지 환하게 밝혀주는 시원하고 활짝 웃는 표정',
+            '살짝 수줍은 미소를 지은 모습': '입가에 상냥함을 가득 담아 살짝 수줍은 미소를 머금은 모습',
+            '장난스럽게 윙크를 건네는 모습': '기분 좋은 에너지를 발산하며 장난스럽게 윙크를 건네는 모습',
+            '당당하고 자신감 넘치는 눈빛': '눈빛에 힘이 실린 자신감 가득한 당당한 표정',
+            '사색에 잠긴 듯 진지한 표정': '차분하고 성숙하며 깊은 생각에 잠겨있는 듯 진지한 표정',
+            '생기 가득하고 활기찬 무드': '주변을 밝고 긍정적인 활력으로 가득 채우는 생기 가득한 무드',
+            '편안하고 자연스러운 모습': '지극히 평온하고 일상의 휴식처럼 편안하고 자연스러운 모습',
+
+            // 5. 의상
+            '단정한 교복 차림': '학창 시절의 풋풋함 and 맑은 감수성이 묻어나는 단정한 교복 차림',
+            '편안한 후드티 코디': '힙하면서도 친근하고 편안해 보이는 후드티 코디',
+            '세련된 일상 캐주얼 룩': '편안하면서 스타일리시한 일상 캐주얼 룩',
+            '따스하고 포근한 니트웨어': '포근한 실의 짜임새가 전하는 따스하고 아늑한 니트웨어',
+            '스포티하고 활기찬 운동복': '건강하고 활기찬 에너지가 돋보이는 스포티한 운동복',
+            '고운 전통 한복 차림': '고유의 단아함과 선의 흐름이 고스란히 살아있는 고운 전통 한복 차림',
+            
+            // 6. 배경
+            '깔끔한 단색 스튜디오 공간': '인물의 실루엣을 깊이감 있게 강조하는 미니멀하고 깔끔한 단색 스튜디오 공간',
+            '초점이 흐려진 야외 배경': '배경이 흐려져서 오직 인물만이 주인공으로 돋보이는 초점이 흐려진 야외 배경',
+            '심플한 흰색 벽면 앞': '아무런 방해 요소 없이 단정하고 심플한 흰색 벽면 앞',
+            '부드러운 무지 배경 속': '연한 파스텔 단색이 따뜻하게 스며들어 있는 부드러운 무지 배경 속',
+            '자연광이 쏟아지는 창가': '아늑한 오후 햇살이 은은하게 쏟아져 내리는 감성 가득한 창가',
+            '은은한 질감의 종이 배경': '은은한 섬유 수작업 질감이 고스란히 남아있는 종이 배경',
+
+            // 7. 마법 효과
+            '반짝이는 가루가 흩날리는 효과': '주변을 신비롭고 영롱하게 수놓는 반짝이는 은빛 마법 가루 효과',
+            '화사하게 피어나는 얼굴 옆 빛 번짐': '눈부신 태양의 아우라처럼 화사하게 퍼지는 얼굴 옆 빛 번짐 효과',
+            '머릿결을 스치는 살랑이는 미풍': '옷자락과 앞머리를 가볍게 건드려 흩날리게 해 입체적인 바람 결을 연출하는 미풍 효과',
+            '몽환적이고 부드러운 안개 수풀': '꿈을 꾸는 듯 몽환적이고 부드러운 하얀 안개 효과',
+            '비눗방울이 방울방울 맺히는 효과': '비누 방울들이 동화처럼 몽글몽글 맺혀 둥둥 떠다니는 비눗방울 효과',
+            '영롱하게 반짝이는 눈동자 속 별빛': '촉촉하고 맑은 물기가 가득 찬 영롱하고 깊은 눈동자 속 별빛 효과',
+            '분홍빛 꽃잎들이 흩날리는 무드': '봄날 벚꽃길처럼 낭만적으로 흩날리는 분홍빛 꽃잎 무드',
+            '황금색 오라 형태의 따뜻한 광채': '인물 주변을 성스럽고 아늑하게 감싸는 따뜻한 황금빛 오라 광채',
+
+            // 8. 구도
+            '얼굴 초밀착 익스트림 뷰': '이목구비의 섬세한 표현을 극대화한 얼굴 초밀착 익스트림 뷰 분위기',
+            '얼굴 클로즈업 샷': '안면의 미세한 감수성과 눈빛에 완벽히 몰입하는 얼굴 클로즈업 분위기',
+            '어깨 위 상반신 바스트 샷': '어깨선 상단을 단정하게 조망한 포트레이트 구도 분위기',
+            '허리 위 상반신 웨이스트 샷': '인물의 전반적인 포즈와 실루엣을 깊이감 있게 담아낸 허리 위 상반신 분위기',
+            '인물 중심 정면 구도': '카메라를 똑바로 응시해 정직함과 강한 신뢰를 주는 인물 중심 정면 구도 분위기',
+            '우아한 옆모습 프로필 샷': '부드러운 실루엣과 얼굴의 우아한 선이 극대화되는 우측/좌측 프로필 구도 분위기'
+        };
+
+        // 수동 카드 선택 제어기 (단일 선택 및 마법 효과 다중 토글 결합)
         function selectCard(element, value) {
             const container = element.parentElement;
             const category = container.getAttribute('data-category');
             
-            // 기존 카테고리 내 활성화 카드 초기화
-            const siblingCards = container.querySelectorAll('.option-card');
-            siblingCards.forEach(card => {
-                card.classList.remove('border-rose-500', 'bg-rose-50/30', 'ring-2', 'ring-rose-500/20');
-                card.classList.remove('border-sky-500', 'bg-sky-50/30', 'ring-2', 'ring-sky-500/20');
-                card.classList.remove('border-emerald-500', 'bg-emerald-50/30', 'ring-2', 'ring-emerald-500/20');
-                card.classList.remove('border-amber-500', 'bg-amber-50/30', 'ring-2', 'ring-amber-500/20');
-                card.classList.remove('border-teal-500', 'bg-teal-50/30', 'ring-2', 'ring-teal-500/20');
-                card.classList.remove('border-purple-500', 'bg-purple-50/30', 'ring-2', 'ring-purple-500/20');
-                card.classList.remove('border-indigo-500', 'bg-indigo-50/30', 'ring-2', 'ring-indigo-500/20');
-
-                // 배지 투명화
-                const badge = card.querySelector('.check-badge');
-                if (badge) {
-                    badge.classList.add('opacity-0', 'scale-75');
-                    badge.classList.remove('opacity-100', 'scale-100');
+            if (category === 'effect') {
+                // 마법 효과 카테고리 전용: 다중 선택 (토글 방식)
+                const index = selections.effect.indexOf(value);
+                if (index > -1) {
+                    // 이미 선택되어 있으면 배열에서 삭제하고 비활성화
+                    selections.effect.splice(index, 1);
+                    element.classList.remove('border-purple-400', 'bg-purple-50/40', 'ring-2', 'ring-purple-400/20');
+                    const badge = element.querySelector('.check-badge');
+                    if (badge) {
+                        badge.classList.add('opacity-0', 'scale-75');
+                        badge.classList.remove('opacity-100', 'scale-100');
+                    }
+                } else {
+                    // 새로 선택한 것이면 배열에 추가하고 활성화
+                    selections.effect.push(value);
+                    element.classList.add('border-purple-400', 'bg-purple-50/40', 'ring-2', 'ring-purple-400/20');
+                    const badge = element.querySelector('.check-badge');
+                    if (badge) {
+                        badge.classList.remove('opacity-0', 'scale-75');
+                        badge.classList.add('opacity-100', 'scale-100');
+                    }
                 }
-            });
+            } else {
+                // 일반 카테고리: 단일 선택 (기존 활성화 비주얼 초기화)
+                const siblingCards = container.querySelectorAll('.option-card');
+                siblingCards.forEach(card => {
+                    card.classList.remove('border-purple-400', 'bg-purple-50/40', 'ring-2', 'ring-purple-400/20');
+                    const badge = card.querySelector('.check-badge');
+                    if (badge) {
+                        badge.classList.add('opacity-0', 'scale-75');
+                        badge.classList.remove('opacity-100', 'scale-100');
+                    }
+                });
 
-            // 선택 카드로 주입
-            selections[category] = value;
+                // 선택 값 업데이트
+                selections[category] = value;
 
-            // 테마 무드별 활성화 보더 색상 매칭
-            let themeColor = 'rose';
-            if (category === 'lighting') themeColor = 'sky';
-            else if (category === 'hair') themeColor = 'emerald';
-            else if (category === 'expression') themeColor = 'amber';
-            else if (category === 'outfit') themeColor = 'rose';
-            else if (category === 'background') themeColor = 'teal';
-            else if (category === 'effect') themeColor = 'purple';
-            else if (category === 'composition') themeColor = 'indigo';
-
-            element.classList.add(`border-${themeColor}-500`, `bg-${themeColor}-50/30`, 'ring-2', `ring-${themeColor}-500/20`);
-            const badge = element.querySelector('.check-badge');
-            if (badge) {
-                badge.classList.remove('opacity-0', 'scale-75');
-                badge.classList.add('opacity-100', 'scale-100');
+                // 보라색 테두리 활성화
+                element.classList.add('border-purple-400', 'bg-purple-50/40', 'ring-2', 'ring-purple-400/20');
+                const badge = element.querySelector('.check-badge');
+                if (badge) {
+                    badge.classList.remove('opacity-0', 'scale-75');
+                    badge.classList.add('opacity-100', 'scale-100');
+                }
             }
 
-            // 실시간 자연어 어셈블리 트리거
+            // 실시간 자연어 조립
             assembleSentence();
         }
 
-        // 한국어 실시간 문맥 조립 알고리즘 (선택 안 함은 무조건 스킵 처리)
+        // 한국어 실시간 고급 묘사형 문맥 조립 알고리즘 (선택 안 함은 필터링)
         function assembleSentence() {
-            const hasStyle = selections.style && selections.style !== 'skip';
-            const hasLighting = selections.lighting && selections.lighting !== 'skip';
-            const hasHair = selections.hair && selections.hair !== 'skip';
-            const hasExpression = selections.expression && selections.expression !== 'skip';
-            const hasOutfit = selections.outfit && selections.outfit !== 'skip';
-            const hasBackground = selections.background && selections.background !== 'skip';
-            const hasEffect = selections.effect && selections.effect !== 'skip';
-            const hasComposition = selections.composition && selections.composition !== 'skip';
-
-            // 필수값 조건 체크
+            // 필수 조건들이 전부 한 번씩이라도 눌렸는지 검증
             if (!selections.style || !selections.lighting || !selections.composition) {
-                document.getElementById('sentenceContainer').innerHTML = 
-                    `<span class="text-slate-400">필수 항목(<strong class="text-rose-400">그림 스타일, 조명 & 분위기, 구도</strong>)을 선택하시면 문장이 멋지게 펼쳐집니다!</span>`;
+                document.getElementById('sentenceContainer').innerHTML = `이 사진을 <span class="text-slate-400">____</span> (으)로 만들어줘`;
                 return;
             }
 
-            // 1. 헤드 구도 구절 시작
-            let headPart = '';
-            if (hasComposition) {
-                headPart += `${selections.composition}로 잡고, `;
+            // 수집된 항목을 descriptiveMap 사전을 활용해 고급 미사여구 형태로 실시간 매핑
+            let selectedTokens = [];
+
+            const addMappedToken = (categoryValue) => {
+                if (categoryValue && categoryValue !== 'skip') {
+                    // 사전 매핑된 묘사 텍스트가 있다면 그것을 쓰고, 없다면 날값을 그대로 유지
+                    const mappedText = descriptiveMap[categoryValue] || categoryValue;
+                    selectedTokens.push(mappedText);
+                }
+            };
+
+            // 서정적 묘사의 흐름을 고려한 토큰 순차 바인딩
+            addMappedToken(selections.style);
+            addMappedToken(selections.lighting);
+            addMappedToken(selections.hair);
+            addMappedToken(selections.expression);
+            addMappedToken(selections.outfit);
+            addMappedToken(selections.background);
+            
+            // 마법 효과 다중 선택 토큰 병합
+            if (selections.effect && selections.effect.length > 0) {
+                selections.effect.forEach(eff => {
+                    addMappedToken(eff);
+                });
             }
+            
+            addMappedToken(selections.composition);
 
-            // 2. 배경 구절
-            let bgPart = '';
-            if (hasBackground) {
-                bgPart += `${selections.background} 촬영합니다. `;
-            }
+            // 매핑된 아름다운 수식어들을 반점(,)으로 나란히 결합
+            let finalKeywords = selectedTokens.join(', ');
 
-            // 3. 인물 구절 (머리, 얼굴표정, 의상 결합)
-            let personParts = [];
-            if (hasHair) personParts.push(selections.hair);
-            if (hasExpression) personParts.push(selections.expression);
-            if (hasOutfit) personParts.push(selections.outfit);
-
-            let personDesc = '';
-            if (personParts.length > 0) {
-                personDesc = `주인공은 ${personParts.join('을 하고, ')} 인물의 모습을 선명하게 표현합니다. `;
-            }
-
-            // 4. 분위기 및 조명, 마법 효과 마무리
-            let lightingPart = `${selections.lighting}을 받아 `;
-            let effectPart = '';
-            if (hasEffect) {
-                effectPart += `${selections.effect} 환상적인 조화를 이룹니다. `;
-            }
-
-            let styleEnding = `이 전체적인 광경은 한 편의 예술적인 <strong class="text-amber-600">${selections.style}</strong> 걸작처럼 고스란히 묘사됩니다.`;
-
-            // 한글 최종 조립
-            const finalSentence = `${headPart}${bgPart}${personDesc}${lightingPart}${effectPart}${styleEnding}`;
+            // 최종 고해상도 예술 사진 주문서 문장 완성
+            const finalSentence = `이 사진을 <strong class="text-purple-600">${finalKeywords}</strong> (으)로 만들어줘`;
             
             document.getElementById('sentenceContainer').innerHTML = finalSentence;
         }
 
-        // 마법의 랜덤 추천 조합 생성기
+        // 마법의 랜덤 추천 조합 생성기 (마법 효과는 1~2개 다중 무작위 조합)
         function randomMagic() {
+            // 토글 오류 방지를 위해 전체 초기화 후 랜덤 지정
+            resetAllQuietly();
+            
             const categories = document.querySelectorAll('[data-category]');
             categories.forEach(container => {
+                const category = container.getAttribute('data-category');
                 const cards = container.querySelectorAll('.option-card');
-                // 각 분야 카드 중 무작위 1개 추려 가상 터치
-                const randomIndex = Math.floor(Math.random() * cards.length);
-                cards[randomIndex].click();
+                
+                if (category === 'effect') {
+                    // 마법 효과 다중 선택용 룰: 무작위로 1개 내지 2개 선택
+                    const count = Math.random() > 0.5 ? 2 : 1;
+                    const selectedIndices = [];
+                    while (selectedIndices.length < count) {
+                        const randomIndex = Math.floor(Math.random() * cards.length);
+                        if (!selectedIndices.includes(randomIndex)) {
+                            selectedIndices.push(randomIndex);
+                        }
+                    }
+                    selectedIndices.forEach(idx => cards[idx].click());
+                } else {
+                    const randomIndex = Math.floor(Math.random() * cards.length);
+                    cards[randomIndex].click();
+                }
             });
             showToast("🔮 신비로운 무작위 사진 주문서가 조합되었습니다!");
         }
 
-        // 전체 필드 리셋 시스템
-        function resetAll() {
+        // 알림 전용 조용한 리셋 함수
+        function resetAllQuietly() {
             for (const key in selections) {
-                selections[key] = '';
+                if (key === 'effect') {
+                    selections[key] = [];
+                } else {
+                    selections[key] = '';
+                }
             }
             const cards = document.querySelectorAll('.option-card');
             cards.forEach(card => {
-                card.classList.remove(
-                    'border-rose-500', 'bg-rose-50/30', 'ring-2', 'ring-rose-500/20',
-                    'border-sky-500', 'bg-sky-50/30', 'ring-2', 'ring-sky-500/20',
-                    'border-emerald-500', 'bg-emerald-50/30', 'ring-2', 'ring-emerald-500/20',
-                    'border-amber-500', 'bg-amber-50/30', 'ring-2', 'ring-amber-500/20',
-                    'border-teal-500', 'bg-teal-50/30', 'ring-2', 'ring-teal-500/20',
-                    'border-purple-500', 'bg-purple-50/30', 'ring-2', 'ring-purple-500/20',
-                    'border-indigo-500', 'bg-indigo-50/30', 'ring-2', 'ring-indigo-500/20'
-                );
+                card.classList.remove('border-purple-400', 'bg-purple-50/40', 'ring-2', 'ring-purple-400/20');
                 const badge = card.querySelector('.check-badge');
                 if (badge) {
                     badge.classList.add('opacity-0', 'scale-75');
                     badge.classList.remove('opacity-100', 'scale-100');
                 }
             });
-            document.getElementById('sentenceContainer').innerHTML = "위 카드에서 원하는 가치를 선택하면 나만의 특별한 주문 문장이 이 자리에 생성됩니다!";
+        }
+
+        // 전체 필드 리셋 시스템
+        function resetAll() {
+            resetAllQuietly();
+            document.getElementById('sentenceContainer').innerHTML = `이 사진을 <span class="text-slate-400">____</span> (으)로 만들어줘`;
             showToast("🔄 모든 선택 항목이 깨끗하게 비워졌습니다.");
         }
 
-        // 클립보드 원클릭 이펙트 복사기 (iFrame 환경 보정용 구형 명령 대체 탑재)
+        // 클립보드 원클릭 이펙트 복사기
         function copyToClipboard(elementId) {
             const container = document.getElementById(elementId);
             if (!container) return;
