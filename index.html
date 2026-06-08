@@ -11,11 +11,8 @@
   <style>
     body {
       font-family: 'Pretendard', sans-serif;
-      background-color: #FFF5EE; /* 스냅샷 속 포근하고 부드러운 피치 베이지 */
+      background-color: #FFF5EE; /* 포근하고 따뜻한 피치 베이지 무드 */
     }
-    /* 모바일 가로 스크롤바 숨기기 효과 */
-    .scrollbar-hide::-webkit-scrollbar { display: none; }
-    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 </head>
 <body class="min-h-screen text-slate-800 pb-16 pt-6 px-4 md:px-8">
@@ -57,60 +54,60 @@
       </div>
       <p class="text-sm md:text-base text-slate-500 px-1 font-bold">사진을 어떤 그림 스타일로 바꿀까요?</p>
       
-      <!-- 카드 텍스트 크기 미세 조정 및 최적화된 Spacing 마감 -->
-      <div class="flex overflow-x-auto gap-4 pb-3 scrollbar-hide snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-x-visible">
+      <!-- 바둑판 그리드로 한눈에 정렬 (모바일 2열, 태블릿 3열, PC 4열) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
         
         <div onclick="selectSingle('style', this, '포근하고 사랑스러운 동화책 삽화 질감의 서정적인 지브리 애니메이션 화풍')" 
-             class="style-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="style-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🏯</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-0.5">지브리 스타일</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-semibold leading-tight">토토로처럼 따뜻하게</div>
         </div>
 
         <div onclick="selectSingle('style', this, '포근하고 따뜻한 수수하고 소박한 질감의 핸드드로잉 동화책 삽화 느낌')" 
-             class="style-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="style-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">📖</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-0.5">동화책 삽화</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-semibold leading-tight">동화 속 한 장면처럼</div>
         </div>
 
         <div onclick="selectSingle('style', this, '맑고 깨끗한 물감이 은은하고 촉촉하게 번져 영롱한 수채화 풍')" 
-             class="style-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="style-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">💧</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-0.5">수채화 스타일</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-semibold leading-tight">맑고 촉촉한 수채화</div>
         </div>
 
         <div onclick="selectSingle('style', this, '선명하고 세련된 현대적 감각의 한국 인기 웹툰 스타일')" 
-             class="style-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="style-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">📱</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-0.5">웹툰 스타일</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-semibold leading-tight">깔끔한 웹툰 무드</div>
         </div>
 
         <div onclick="selectSingle('style', this, '생동감 넘치고 입체적인 질감이 돋보이는 픽사 3D 애니메이션 화풍')" 
-             class="style-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="style-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🧸</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-0.5">픽사 3D 스타일</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-semibold leading-tight">생생한 3D 입체 캐릭터</div>
         </div>
 
         <div onclick="selectSingle('style', this, '꿈과 희망을 주는 클래식하고 아름다운 디즈니 입체 화풍')" 
-             class="style-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="style-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🏰</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-0.5">디즈니 스타일</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-semibold leading-tight">클래식한 애니메이션</div>
         </div>
 
         <div onclick="selectSingle('style', this, '실제 카메라로 정교하게 찍어낸 듯 생생한 실사 사진 느낌')" 
-             class="style-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="style-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">📸</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-0.5">실사 스타일</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-semibold leading-tight">정교한 사진 질감</div>
         </div>
 
         <div onclick="selectSingle('style', this, '흑백 연필 선으로 한 땀 한 땀 따뜻하고 정성스럽게 꾹꾹 눌러 그린 선')" 
-             class="style-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="style-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">✏️</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-0.5">연필 스케치</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-semibold leading-tight">따뜻한 손그림 스케치</div>
@@ -130,38 +127,38 @@
       </div>
       <p class="text-sm md:text-base text-slate-500 px-1 font-bold">사진의 조명 무드를 선택해 볼까요?</p>
       
-      <div class="flex overflow-x-auto gap-4 pb-3 scrollbar-hide snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-5 md:overflow-x-visible">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
         
         <div onclick="selectSingle('lighting', this, '숲속 야외처럼 맑고 투명하게 부서지는 자연광 조명')" 
-             class="lighting-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="lighting-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🌿</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-0.5">자연광</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-semibold leading-tight">맑고 깨끗한 자연의 빛</div>
         </div>
 
         <div onclick="selectSingle('lighting', this, '창가 사이로 은은하고 따스하게 쏟아지는 오후 햇살 조명')" 
-             class="lighting-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="lighting-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">☀️</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-0.5">햇살 조명</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-semibold leading-tight">오후 감성의 부드러운 볕</div>
         </div>
 
         <div onclick="selectSingle('lighting', this, '티없이 화사한 뽀얀 고광량의 전문 스튜디오 조명')" 
-             class="lighting-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="lighting-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">📸</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-0.5">스튜디오 조명</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-semibold leading-tight">정밀하고 선명한 화보 빛</div>
         </div>
 
         <div onclick="selectSingle('lighting', this, '그늘진 듯 부드럽고 잔잔한 감성을 더하는 감성 조명')" 
-             class="lighting-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="lighting-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">☁️</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-0.5">부드러운 조명</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-semibold leading-tight">잔잔하게 감싸는 아늑한 빛</div>
         </div>
 
         <div onclick="selectSingle('lighting', this, '노란 촛불처럼 마음을 편안하게 녹여주는 아늑하고 따뜻한 조명')" 
-             class="lighting-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="lighting-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🕯️</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-0.5">따뜻한 조명</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-semibold leading-tight">황금빛 감성의 따뜻한 무드</div>
@@ -181,11 +178,11 @@
       </div>
       <p class="text-sm md:text-base text-slate-500 px-1 font-bold">마음에 드는 헤어스타일을 골라보세요.</p>
       
-      <div class="flex overflow-x-auto gap-4 pb-3 scrollbar-hide snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-x-visible">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
         
         <!-- 단발머리 -->
         <div onclick="selectSingle('hair', this, '턱선까지 가볍게 찰랑이며 내려오는 단정한 단발머리')" 
-             class="hair-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="hair-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">👧</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1 flex flex-col items-center">
             <span>단발머리</span>
@@ -196,7 +193,7 @@
 
         <!-- 긴 생머리 -->
         <div onclick="selectSingle('hair', this, '어깨 아래로 차분하게 흘러내리는 윤기 있고 고운 긴 생머리')" 
-             class="hair-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="hair-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">👩</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1 flex flex-col items-center">
             <span>긴 생머리</span>
@@ -207,7 +204,7 @@
 
         <!-- 웨이브 헤어 -->
         <div onclick="selectSingle('hair', this, '우아하고 부드러운 곡선이 살아있는 풍성한 물결 웨이브 헤어')" 
-             class="hair-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="hair-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">👩‍🦱</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1 flex flex-col items-center">
             <span>웨이브 헤어</span>
@@ -218,7 +215,7 @@
 
         <!-- 차분하게 내린 머리 -->
         <div onclick="selectSingle('hair', this, '앞머리를 이마 위로 단정하고 깔끔하게 내린 차분한 댄디 헤어')" 
-             class="hair-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="hair-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">👦</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1 flex flex-col items-center">
             <span>차분히 내린머리</span>
@@ -229,7 +226,7 @@
 
         <!-- 멋쟁이 올림머리 -->
         <div onclick="selectSingle('hair', this, '이마가 훤히 보이도록 클래식하게 뒤로 넘긴 이지적인 가르마 올림머리')" 
-             class="hair-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="hair-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">👨‍💼</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1 flex flex-col items-center">
             <span>멋쟁이 올림머리</span>
@@ -240,18 +237,18 @@
 
         <!-- 가르마 웨이브 머리 -->
         <div onclick="selectSingle('hair', this, '이마를 반으로 부드럽게 나누어 트렌디한 웨이브를 준 가르마 머리')" 
-             class="hair-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="hair-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🧑‍🦱</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1 flex flex-col items-center">
             <span>가르마 웨이브</span>
             <span class="text-[11px] font-black bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full mt-1">(남 추천)</span>
           </div>
-          <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">가르마 수려한 웨이브</div>
+          <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">부드러운 가르마 펌</div>
         </div>
 
         <!-- 선택 안 함 -->
         <div onclick="selectSingle('hair', this, '')" 
-             class="hair-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 bg-slate-50/50">
+             class="hair-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 bg-slate-50/50">
           <div class="text-4xl mb-2.5">🚫</div>
           <div class="font-black text-slate-400 text-base md:text-lg mb-1.5">선택 안 함</div>
           <div class="text-[11px] md:text-xs text-slate-400 font-bold leading-tight">내 머리 스타일 그대로 사용</div>
@@ -271,59 +268,59 @@
       </div>
       <p class="text-sm md:text-base text-slate-500 px-1 font-bold">주인공이 어떤 표정을 지으면 좋을까요?</p>
       
-      <div class="flex overflow-x-auto gap-4 pb-3 scrollbar-hide snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-x-visible">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
         
         <div onclick="selectSingle('expression', this, '보는 이의 마음을 밝히는 상큼하고 환하게 활짝 웃는 표정')" 
-             class="expression-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="expression-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">😆</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">환하게 웃기</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">상큼하고 행복한 미소</div>
         </div>
 
         <div onclick="selectSingle('expression', this, '상냥하고 잔잔한 미소를 얇게 지은 부드러운 모습')" 
-             class="expression-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="expression-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🙂</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">살짝 미소</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">포근하고 부드러운 얼굴</div>
         </div>
 
         <div onclick="selectSingle('expression', this, '장난스럽게 윙크를 건네는 사랑스러운 모습')" 
-             class="expression-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="expression-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">😉</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">윙크하기</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">상큼발랄한 매력 연출</div>
         </div>
 
         <div onclick="selectSingle('expression', this, '눈빛에 힘이 실린 당당하고 자신감 가득한 표정')" 
-             class="expression-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="expression-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">😎</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">자신감 가득</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">당당한 멋이 깃든 힘</div>
         </div>
 
         <div onclick="selectSingle('expression', this, '차분하고 성숙하며 깊은 생각에 잠긴 사색적인 표정')" 
-             class="expression-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="expression-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🤔</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">진지한 표정</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">진중하고 성숙한 감성</div>
         </div>
 
         <div onclick="selectSingle('expression', this, '비타민처럼 해피 에너지가 가득 도는 밝고 활기찬 무드')" 
-             class="expression-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="expression-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">✨</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">밝고 활기찬 표정</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">생기가 가득 솟구치는 무드</div>
         </div>
 
         <div onclick="selectSingle('expression', this, '꾸밈없는 평화로운 휴일의 일상처럼 편안하고 자연스러운 모습')" 
-             class="expression-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="expression-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">😌</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">자연스러운 표정</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">내 본연의 힘이 실린 은은함</div>
         </div>
 
         <div onclick="selectSingle('expression', this, '')" 
-             class="expression-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 bg-slate-50/50">
+             class="expression-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 bg-slate-50/50">
           <div class="text-4xl mb-2.5">🚫</div>
           <div class="font-black text-slate-400 text-base md:text-lg mb-1.5">선택 안 함</div>
           <div class="text-[11px] md:text-xs text-slate-400 font-bold leading-tight">찍어놓은 원래 얼굴 그대로</div>
@@ -343,52 +340,52 @@
       </div>
       <p class="text-sm md:text-base text-slate-500 px-1 font-bold">사진 속 옷을 코디해 보세요.</p>
       
-      <div class="flex overflow-x-auto gap-4 pb-3 scrollbar-hide snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-x-visible">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
         
         <div onclick="selectSingle('outfit', this, '단정하고 풋풋한 학생 시절의 향수를 부르는 학교 교복 차림')" 
-             class="outfit-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="outfit-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🏫</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">교복</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">학교가 연상되는 단정한 스타일</div>
         </div>
 
         <div onclick="selectSingle('outfit', this, '귀여운 모자가 달린 오버사이즈의 아주 편안하고 캐주얼한 스트릿 후드티')" 
-             class="outfit-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="outfit-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🧥</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">후드티</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">오버핏의 아늑하고 편한 복장</div>
         </div>
 
         <div onclick="selectSingle('outfit', this, '편안하면서 스타일리시한 일상 캐주얼 룩')" 
-             class="outfit-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="outfit-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">👖</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">캐주얼</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">데일리 미니멀 일상 코디</div>
         </div>
 
         <div onclick="selectSingle('outfit', this, '폭신폭신하고 부드러운 정교한 짜임새의 포근한 파스텔톤 니트 스웨터')" 
-             class="outfit-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="outfit-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🧶</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">니트웨어</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">뜨개 특유의 포근한 무드</div>
         </div>
 
         <div onclick="selectSingle('outfit', this, '에너지가 넘치고 신선한 활동성이 돋보이는 스포티 운동복')" 
-             class="outfit-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="outfit-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">👟</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">운동복</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">액티브하고 생생한 체육 복장</div>
         </div>
 
         <div onclick="selectSingle('outfit', this, '고운 선과 화사한 색감이 고결하게 살아있는 단아한 한국 전통 한복')" 
-             class="outfit-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="outfit-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🎎</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">전통 한복</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">우아한 우리 정통 전통 옷</div>
         </div>
 
         <div onclick="selectSingle('outfit', this, '')" 
-             class="outfit-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 bg-slate-50/50">
+             class="outfit-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 bg-slate-50/50">
           <div class="text-4xl mb-2.5">🚫</div>
           <div class="font-black text-slate-400 text-base md:text-lg mb-1.5">선택 안 함</div>
           <div class="text-[11px] md:text-xs text-slate-400 font-bold leading-tight">내가 입고 있던 원래 사복 그대로</div>
@@ -408,52 +405,52 @@
       </div>
       <p class="text-sm md:text-base text-slate-500 px-1 font-bold">어디서 촬영한 느낌을 낼까요?</p>
       
-      <div class="flex overflow-x-auto gap-4 pb-3 scrollbar-hide snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-x-visible">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
         
         <div onclick="selectSingle('background', this, '인물이 완벽히 주인공으로 도드라지는 깔끔하고 미니멀한 단색 스튜디오 공간')" 
-             class="background-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="background-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🏛️</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">단색 스튜디오</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">인물에 완전히 시선 집중하는 방</div>
         </div>
 
         <div onclick="selectSingle('background', this, '배경이 뽀얗고 몽환적으로 날아가 인물만 극대화되는 초점이 아름답게 흐려진 야외')" 
-             class="background-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="background-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🌲</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">아웃포커싱 야외</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">숲속의 아지랑이 야외 풍경</div>
         </div>
 
         <div onclick="selectSingle('background', this, '미니멀리즘 감성이 묻어나는 심플하고 깨끗한 화이트 벽면 앞')" 
-             class="background-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="background-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">⬜</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">미니멀 화이트 벽</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">현대식 모던한 무늬 단색 벽</div>
         </div>
 
         <div onclick="selectSingle('background', this, '연한 파스텔 색조로 은은하게 채색되어 부드러운 감성을 자아내는 무지 배경')" 
-             class="background-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="background-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🌸</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">소프트 파스텔 무지</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">부드럽고 엷은 색 도화지 필터</div>
         </div>
 
         <div onclick="selectSingle('background', this, '스틸컷처럼 아늑한 햇살이 새어 들어오는 예쁜 빈티지 창가 앞')" 
-             class="background-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="background-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🪟</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">창가 오후 햇살</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">영화 스틸컷 느낌의 아늑한 오후</div>
         </div>
 
         <div onclick="selectSingle('background', this, '은은한 섬유 수작업 질감이 고스란히 남아있는 고급스러운 아날로그 종이 배경')" 
-             class="background-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="background-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">📄</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">질감 종이 배경</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">따스하고 수수한 수제 미술 용지</div>
         </div>
 
         <div onclick="selectSingle('background', this, '')" 
-             class="background-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 bg-slate-50/50">
+             class="background-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300 bg-slate-50/50 col-span-2 sm:col-span-3 lg:col-span-4">
           <div class="text-4xl mb-2.5">🚫</div>
           <div class="font-black text-slate-400 text-base md:text-lg mb-1.5">선택 안 함</div>
           <div class="text-[11px] md:text-xs text-slate-400 font-bold leading-tight">촬영된 내 공간 배경 그대로</div>
@@ -466,66 +463,66 @@
          [카테고리 7] 마법 효과 (선택, ★중복 선택 가능★)
          ========================================== -->
     <section class="space-y-3">
-      <div class="flex items-center gap-2.5 px-1">
+      <div class="flex items-center gap-2 px-1">
         <span class="text-2xl">🪄</span>
         <h2 class="text-xl md:text-2xl font-black text-slate-800">마법 효과</h2>
         <span class="px-3.5 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-extrabold shadow-sm">중복 선택 가능</span>
       </div>
       <p class="text-sm md:text-base text-slate-500 px-1 font-bold">인물 주변에 특별한 환상 효과를 겹쳐 보세요.</p>
       
-      <div class="flex overflow-x-auto gap-4 pb-3 scrollbar-hide snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-x-visible">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
         
         <div onclick="toggleMulti(this, '빛을 받아 영롱하게 공중을 떠다니는 신비로운 금빛 가루 효과')" 
-             class="magic-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="magic-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">✨</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">반짝이는 가루</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">요정 가루 뿌린 듯 번쩍이는 느낌</div>
         </div>
 
         <div onclick="toggleMulti(this, '햇살 오라처럼 얼굴 주변으로 부드럽게 화사하게 번지는 감성적인 렌즈 플레어 빛 번짐 효과')" 
-             class="magic-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="magic-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🔆</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">얼굴 옆 빛 번짐</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">포근하게 감싸며 퍼지는 노란 광</div>
         </div>
 
         <div onclick="toggleMulti(this, '옷자락 and 앞머리를 가볍게 건드려 흩날리게 해 입체적인 바람 결을 연출하는 미풍 효과')" 
-             class="magic-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="magic-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🍃</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">살랑이는 미풍</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">머리와 옷을 스치고 지나는 바람</div>
         </div>
 
         <div onclick="toggleMulti(this, '새벽 안개처럼 몽환적이고 아늑하게 시야를 채우는 부드러운 안개 수풀 효과')" 
-             class="magic-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="magic-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🌫️</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">부드러운 안개</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">정령 숲속 분위기 같은 아지랑이</div>
         </div>
 
         <div onclick="toggleMulti(this, '오색빛깔 영롱한 비눗방울들이 방울방울 맺혀 동화 속 풍경처럼 둥둥 떠다니는 효과')" 
-             class="magic-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="magic-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🧼</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">투명 비눗방울</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">비눗방울이 둥실둥실 예쁜 공기</div>
         </div>
 
         <div onclick="toggleMulti(this, '눈동자 속에 맑고 청명한 별 반사광을 채워 초롱초롱 영롱하게 빛나는 효과')" 
-             class="magic-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="magic-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">👁️</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">눈동자 속 별빛</div>
-          <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">초롱하게 타오르는 눈망울</div>
+          <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">초롱하게 타오르는 눈동자</div>
         </div>
 
         <div onclick="toggleMulti(this, '벚꽃 바람처럼 분홍빛 꽃잎들이 주인공을 축복하듯 사르르 공중에 흩날리는 효과')" 
-             class="magic-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="magic-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🌸</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">흩날리는 꽃잎</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">벚꽃이 날리는 화사한 입체 생기</div>
         </div>
 
         <div onclick="toggleMulti(this, '몸 실루엣 주변으로 따뜻하고 포근하게 타오르는 황금색 오라 형태의 광채 효과')" 
-             class="magic-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="magic-card w-full bg-white border border-slate-200 rounded-[18px] p-4 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">✨</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">따뜻한 광채</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">인물 주위에 은은히 타오르는 아우라</div>
@@ -545,45 +542,45 @@
       </div>
       <p class="text-sm md:text-base text-slate-500 px-1 font-bold">어디를 중심으로 화면에 담을까요?</p>
       
-      <div class="flex overflow-x-auto gap-4 pb-3 scrollbar-hide snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-x-visible">
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
         
         <div onclick="selectSingle('composition', this, '이목구비 가득 시선을 압도하는 얼굴 초밀착 극클로즈업 뷰')" 
-             class="composition-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="composition-card w-full bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">👀</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">얼굴 극초밀착</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">이목구비를 아주 시원스럽게 강조한 줌</div>
         </div>
 
         <div onclick="selectSingle('composition', this, '인물의 내면과 깊은 눈빛에 초점을 맞춘 표준 클로즈업 샷')" 
-             class="composition-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="composition-card w-full bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">👤</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">얼굴 클로즈업</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">가장 자연스러운 눈빛 집중 줌 구도</div>
         </div>
 
         <div onclick="selectSingle('composition', this, '어깨선 상단을 단정하게 조망한 포트레이트 구도')" 
-             class="composition-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="composition-card w-full bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">👚</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">어깨 위 상반신</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">증명사진 무드의 고전적인 단정 밸런스</div>
         </div>
 
         <div onclick="selectSingle('composition', this, '포즈와 의상 스타일까지 시원하게 눈에 들어오는 허리 위 상반신 미디엄 샷')" 
-             class="composition-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="composition-card w-full bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🧍</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">허리 위 상반신</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">포즈와 옷 스타일까지 살아나는 샷</div>
         </div>
 
         <div onclick="selectSingle('composition', this, '시선이 똑바로 닿아 당당하고 매력적인 정면 인물 대칭형 구도')" 
-             class="composition-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="composition-card w-full bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">🎯</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">인물 중심 정면</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">눈맞춤 대칭 정렬로 깔끔한 구도</div>
         </div>
 
         <div onclick="selectSingle('composition', this, '콧대와 턱의 아름다운 입체 선이 잘 살아나는 신비롭고 우아한 옆모습 프로필 샷')" 
-             class="composition-card snap-start shrink-0 w-[195px] md:w-auto bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+             class="composition-card w-full bg-white border border-slate-200 rounded-[20px] p-5 text-center cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
           <div class="text-4xl mb-2.5">📐</div>
           <div class="font-black text-slate-800 text-base md:text-lg mb-1.5">옆모습 프로필</div>
           <div class="text-[11px] md:text-xs text-slate-500 font-bold leading-tight">영화 스틸컷 느낌의 아련한 선 연출</div>
@@ -651,10 +648,10 @@
     <span class="text-amber-400 text-lg">✨</span> <span id="toastMessage">성공적으로 작성되었습니다!</span>
   </div>
 
-  <!-- 우측 하단 버전 표시 배지 (v1.3.11) -->
+  <!-- 우측 하단 버전 표시 배지 (v1.4.0) -->
   <div class="fixed bottom-4 right-4 bg-slate-900/90 text-slate-300 text-[10px] md:text-xs font-mono py-1.5 px-3 rounded-full shadow-lg flex items-center gap-2 border border-slate-800 select-none z-40">
     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-    <span>Version 1.3.11 (Stable)</span>
+    <span>Version 1.4.0 (Stable)</span>
   </div>
 
   <script>
